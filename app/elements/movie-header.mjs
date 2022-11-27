@@ -1,4 +1,4 @@
-export default function Element ({ html, state }) {
+export default function Element ({ html }) {
   return html`
 <style>
   :host header {
