@@ -12,7 +12,7 @@ export default function Element ({ html, state }) {
         margin-right: 0.5rem;
       }
     </style>
-    <div class="flex mr-auto">
+    <div class="flex mie-auto">
         <movie-button href="${homepage}" label="Website">
             ${link}
         </movie-button>

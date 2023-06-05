@@ -10,10 +10,10 @@ export default function Element ({ html }) {
     padding: 0 24px;
   }
 </style>
-<header class="fixed top0 right0 w-full z1">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center">Hamburger</div>
-    <div class="flex items-center">Everything Else</div>
+<header class="fixed inset-bs-0 si-100 z1">
+  <div class="flex align-items-center justify-content-between">
+    <div class="flex align-items-center">Hamburger</div>
+    <div class="flex align-items-center">Everything Else</div>
   </div>
 </header>`
 }

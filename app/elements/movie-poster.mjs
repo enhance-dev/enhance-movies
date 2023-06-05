@@ -17,20 +17,20 @@ export default function Element ({ html, state }) {
     <a href="/movie?id=${id}&page=1"
         class="relative flex flex-col"
     >
-        <div class="aspect-ratio-box h-0 overflow-hidden relative">
-            <div class="absolute top0 left0 w-full h-full flex items-center flex-col justify-center">
+        <div class="aspect-ratio-box sb-0 overflow-hidden relative">
+            <div class="absolute inset-bs0 inset-is0 si-100 sb-100 flex align-items-center flex-col justify-content-center">
                 <div class="relative flex-grow">
                     <img
                         width="342" height="513"
                         src="https://image.tmdb.org/t/p/w342${poster_path}"
-                        class="object-cover w-full h-full"
+                        class="object-cover si-100 sb-100"
                     />
                 </div>
           </div>
         </div>
-        <div class="flex flex-col content-between items-center pt-1 pb-1 pl1 pr1">
+        <div class="flex flex-col content-between align-items-center pt-1 pb-1 pl1 pr1">
             <h2 class="text-1 font-normal mb-2">${title}</h2>
-            <div class="flex relative items-center">${vote_average}</div>
+            <div class="flex relative align-items-center">${vote_average}</div>
         </div>
     </a>`
 }

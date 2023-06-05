@@ -29,8 +29,8 @@ export default function Element ({ html, state }) {
     }
   </style>
   <a href="${href}" target="_blank" rel="noopener noreferrer">
-    <button class="relative inline-flex items-center justify-center outline-none select-none font-medium text-1 background-transparent">
-        <span class="w-full flex items-center justify-center">
+    <button class="relative inline-flex align-items-center justify-content-center outline-none select-none font-medium text-1 background-transparent">
+        <span class="si-100 flex align-items-center justify-content-center">
             ${label}
             <span style="margin-left: 8px; display: inherit;">
                 <slot name="icon"></slot>

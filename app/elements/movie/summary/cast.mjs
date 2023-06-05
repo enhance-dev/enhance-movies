@@ -24,7 +24,7 @@ export default function Element ({ html, state }) {
         }
       </style>
       <typography-h3>The Cast</typography-h3>
-      <div class="w-full">
+      <div class="si-100">
         <div class="overflow-hidden">
         <div class="flex" style="width: ${67.8889 * cast.length}">
             ${cast.map(actor => `<a href="/person?id=${actor.id}&page=1" class="background-transparent">
