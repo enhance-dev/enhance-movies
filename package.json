@@ -1,17 +1,18 @@
 {
-  "name": "begin-app",
+  "name": "enhance-movie",
   "version": "0.0.1",
   "scripts": {
-    "start": "begin dev",
+    "start": "enhance dev",
     "lint": "eslint ./app/**/*.mjs --fix"
   },
   "devDependencies": {
-    "@enhance/types": "latest",
-    "eslint": "latest"
+    "@enhance/cli": "^1.0.3",
+    "@enhance/types": "^0.6.0",
+    "eslint": "^8.42.0"
   },
   "dependencies": {
-    "@enhance/arc-plugin-enhance": "latest",
-    "tiny-json-http": "^7.4.2"
+    "@enhance/arc-plugin-enhance": "^6.1.2",
+    "tiny-json-http": "^7.5.1"
   },
   "eslintConfig": {
     "env": {
