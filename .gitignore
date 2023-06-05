@@ -1,8 +1,11 @@
-.env
-.DS_Store
-**/static.json
-node_modules
+# .gitignore for this template project
+# template.gitignore should be used by generated projects
+node_modules/
+manifest.json
 package-lock.json
-public/bundles
+.DS_Store
+.enhance/
+public/static.json
 sam.json
 sam.yaml
+.env
