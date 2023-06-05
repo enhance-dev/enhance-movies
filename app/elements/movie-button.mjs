@@ -1,6 +1,10 @@
 export default function Element ({ html, state }) {
   const { attrs } = state
   const { href, label } = attrs
+  const remote = Object.keys(attrs).includes('remote')
+    ? true
+    : false
+  const newTab = `target="_blank" rel="noopener noreferrer"`
   return html`
   <style>
     :host button {
@@ -28,7 +32,7 @@ export default function Element ({ html, state }) {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),cubic-bezier(0.4, 0, 0.2, 1),cubic-bezier(0.4, 0, 0.2, 1),cubic-bezier(0.4, 0, 0.2, 1);
     }
   </style>
-  <a href="${href}" target="_blank" rel="noopener noreferrer">
+  <a href="${href}" ${remote ? newTab : ''}>
     <button class="relative inline-flex align-items-center justify-content-center outline-none select-none font-medium text-1 background-transparent">
         <span class="si-100 flex align-items-center justify-content-center">
             ${label}

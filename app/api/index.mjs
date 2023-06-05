@@ -1,12 +1,12 @@
 import { getMovies } from '../tmdbAPI/index.mjs'
 
 export async function get (req) {
-  const page = req.query.page || 1
-  const shows = await getMovies('popular', page)
+  const { category = 'popular', page = 1 } = req.query
+  const shows = await getMovies(category, page)
   return {
     json: { title: {
-      primary: 'popular',
+      primary: category,
       secondary: 'movies'
-    }, shows }
+    }, shows, category, page }
   }
 }
