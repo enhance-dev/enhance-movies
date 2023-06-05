@@ -8,7 +8,7 @@ export default function Element ({ html, state }) {
             transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         .aspect-ratio-box {
-            padding-top: 150%;
+            aspect-ratio: 2 / 3;
         }
         img {
             filter: grayscale(0%);
@@ -17,16 +17,11 @@ export default function Element ({ html, state }) {
     <a href="/movie?id=${id}&page=1"
         class="relative flex flex-col"
     >
-        <div class="aspect-ratio-box sb-0 overflow-hidden relative">
-            <div class="absolute inset-bs0 inset-is0 si-100 sb-100 flex align-items-center flex-col justify-content-center">
-                <div class="relative flex-grow">
-                    <img
-                        width="342" height="513"
-                        src="https://image.tmdb.org/t/p/w342${poster_path}"
-                        class="object-cover si-100 sb-100"
-                    />
-                </div>
-          </div>
+        <div class="aspect-ratio-box overflow-hidden">
+            <img
+                src="https://image.tmdb.org/t/p/w342${poster_path}"
+                class="object-cover"
+            />
         </div>
         <div class="flex flex-col content-between align-items-center pt-1 pb-1 pl1 pr1">
             <h2 class="text-1 font-normal mb-2">${title}</h2>
@@ -34,4 +29,3 @@ export default function Element ({ html, state }) {
         </div>
     </a>`
 }
-
