@@ -21,6 +21,7 @@ export default function Element ({ html, state }) {
             <img
                 src="https://image.tmdb.org/t/p/w342${poster_path}"
                 class="object-cover"
+                alt="${title}"
             />
         </div>
         <div class="flex flex-col content-between align-items-center pt-1 pb-1 pl1 pr1">

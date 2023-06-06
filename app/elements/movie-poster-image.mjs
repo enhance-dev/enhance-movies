@@ -2,7 +2,7 @@ export default function Element ({ html, state }) {
   const { attrs, store } = state
   const { width } = attrs
   const { movie } = store
-  const { poster_path } = movie
+  const { poster_path, title } = movie
   return html`
       <style>
           .aspect-ratio-box {
@@ -16,6 +16,7 @@ export default function Element ({ html, state }) {
             <img
                 src="https://image.tmdb.org/t/p/w${width}${poster_path}"
                 class="object-cover"
+                alt="${title}"
             />
         </div>`
 }
