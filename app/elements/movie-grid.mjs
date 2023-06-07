@@ -1,6 +1,7 @@
 export default function Element ({ html, state }) {
-  const { store } = state
-  const shows = store.shows.results.map((show, i) => `<movie-poster key="${i}"></movie-poster>`).join('')
+  const { attrs, store } = state
+  const { type = 'shows' } = attrs
+  const shows = store[type].results.map((show, i) => `<movie-poster type="${type}" key="${i}"></movie-poster>`).join('')
   return html`
 <style>
     :host {

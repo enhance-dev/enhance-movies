@@ -27,5 +27,9 @@ const getVideos = async function(id) {
   const movie = await tiny.get({url: `${baseUrl}/movie/${id}/videos?api_key=${TMDB_API_KEY}`})
   return movie.body
 }
+const getRecommendations = async function(id, page) {
+  const movie = await tiny.get({url: `${baseUrl}/movie/${id}/recommendations?page=${page}&api_key=${TMDB_API_KEY}`})
+  return movie.body
+}
 
-export { getCredits, getMovie, getMovies, getVideos }
+export { getCredits, getMovie, getMovies, getVideos, getRecommendations }

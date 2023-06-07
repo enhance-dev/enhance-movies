@@ -1,7 +1,7 @@
 export default function Element ({ html, state }) {
   const { store } = state
-  const { title = {} } = store
-  const { primary, secondary } = title
+  const { movie = {} } = store
+  const { title, tagline } = movie
   return html`
   <style>
     :host {
@@ -9,8 +9,8 @@ export default function Element ({ html, state }) {
         margin-bottom: 1rem;
     }
   </style>
-  <h1 class="text2 tracking-2 font-bold mb-5 leading1 uppercase">${primary}</h1>
-  <h2 class="text-1 font-light uppercase">${secondary}</h2>
+  <h1 class="text2 tracking-2 font-bold mb-5 leading1 uppercase">${title}</h1>
+  <h2 class="text-1 font-light uppercase">${tagline}</h2>
 `
 }
 
