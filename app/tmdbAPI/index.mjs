@@ -9,27 +9,38 @@ const {
 const baseUrl = `${TMDB_API_BASE_URL}/${TMDB_API_VERSION}`
 
 const getMovies = async function(type, page) {
-  const movies = await tiny.get({url: `${baseUrl}/movie/${type}?page=${page}&api_key=${TMDB_API_KEY}`})
-  return movies.body
+  const response = await tiny.get({url: `${baseUrl}/movie/${type}?page=${page}&api_key=${TMDB_API_KEY}`})
+  return response.body
 }
 
 const getMovie = async function(id) {
-  const movie = await tiny.get({url: `${baseUrl}/movie/${id}?api_key=${TMDB_API_KEY}&lang=en`})
-  return movie.body
+  const response = await tiny.get({url: `${baseUrl}/movie/${id}?api_key=${TMDB_API_KEY}&lang=en`})
+  return response.body
+}
+
+const getMovieWithCast = async function(id, page = '1', sort_by = 'popularity.desc') {
+  const response = await tiny.get({url: `${baseUrl}/discover/movie?with_cast=${id}&page=${page}&sort_by=${sort_by}&api_key=${TMDB_API_KEY}`})
+  return response.body
 }
 
 const getCredits = async function(id) {
-  const movie = await tiny.get({url: `${baseUrl}/movie/${id}/credits?api_key=${TMDB_API_KEY}`})
-  return movie.body
+  const response = await tiny.get({url: `${baseUrl}/movie/${id}/credits?api_key=${TMDB_API_KEY}`})
+  return response.body
 }
 
 const getVideos = async function(id) {
-  const movie = await tiny.get({url: `${baseUrl}/movie/${id}/videos?api_key=${TMDB_API_KEY}`})
-  return movie.body
-}
-const getRecommendations = async function(id, page) {
-  const movie = await tiny.get({url: `${baseUrl}/movie/${id}/recommendations?page=${page}&api_key=${TMDB_API_KEY}`})
-  return movie.body
+  const response = await tiny.get({url: `${baseUrl}/movie/${id}/videos?api_key=${TMDB_API_KEY}`})
+  return response.body
 }
 
-export { getCredits, getMovie, getMovies, getVideos, getRecommendations }
+const getRecommendations = async function(id, page) {
+  const response = await tiny.get({url: `${baseUrl}/movie/${id}/recommendations?page=${page}&api_key=${TMDB_API_KEY}`})
+  return response.body
+}
+
+const getPerson = async function(id) {
+  const response = await tiny.get({url: `${baseUrl}/person/${id}?api_key=${TMDB_API_KEY}`})
+  return response.body
+}
+
+export { getCredits, getMovie, getMovies, getVideos, getRecommendations, getPerson, getMovieWithCast }
