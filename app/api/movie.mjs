@@ -6,15 +6,14 @@ export async function get (req) {
   const credits = await getCredits(id)
   const videos = (await getVideos(id)).results
   const trailer = videos.find(video => video.type === 'Trailer' && video.site === 'YouTube')
-  const recs = await getRecommendations(id, page)
+  const shows = await getRecommendations(id, page)
   movie.cast = credits.cast
   movie.trailer = trailer
   const baseUrl = `/movie?id=${id}`
-  const total_pages = recs.total_pages
   return {
     json: { title: {
       primary: "recommended",
       secondary: "movies"
-    }, movie, recs, page, total_pages, baseUrl }
+    }, movie, shows, baseUrl }
   }
 }

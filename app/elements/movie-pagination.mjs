@@ -1,6 +1,7 @@
 export default function Element ({ html, state }) {
   const { store } = state
-  const { baseUrl, page, total_pages } = store
+  const { baseUrl, shows } = store
+  const { page, total_pages } = shows
   const pageInt = parseInt(page, 10)
   const prevUrl = `${baseUrl}&page=${pageInt - 1}`
   const nextUrl = `${baseUrl}&page=${pageInt + 1}`

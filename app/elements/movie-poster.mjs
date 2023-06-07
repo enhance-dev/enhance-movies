@@ -1,7 +1,7 @@
 export default function Element ({ html, state }) {
   const { attrs, store } = state
-  const { key, type } = attrs
-  const {id, poster_path, title, vote_average} = store[type].results[key]
+  const { key } = attrs
+  const {id, poster_path, title, vote_average} = store.shows.results[key]
   return html`
     <style>
         a {
