@@ -16,9 +16,9 @@ export default function Element ({ html, state }) {
         ${homepage && `<movie-button href="${homepage}" label="Website" remote>
             ${link}
         </movie-button>`}
-        <movie-button href="https://www.imdb.com/name/${imdb_id}/" label="IMDB" remote>
+        ${imdb_id && `<movie-button href="https://www.imdb.com/name/${imdb_id}/" label="IMDB" remote>
             ${imdb}
-        </movie-button>
+        </movie-button>`}
     </div>
     <movie-button href="/" label="Back">
 

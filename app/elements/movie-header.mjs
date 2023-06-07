@@ -13,7 +13,9 @@ export default function Element ({ html }) {
 <header class="fixed inset-bs-0 si-100 z1">
   <div class="flex align-items-center justify-content-between">
     <div class="flex align-items-center">Hamburger</div>
-    <div class="flex align-items-center">Everything Else</div>
+    <div class="flex align-items-center">
+      <movie-search></movie-search>
+    </div>
   </div>
 </header>`
 }

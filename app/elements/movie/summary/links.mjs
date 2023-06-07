@@ -13,15 +13,15 @@ export default function Element ({ html, state }) {
       }
     </style>
     <div class="flex mie-auto">
-        <movie-button href="${homepage}" label="Website" remote>
+        ${homepage && `<movie-button href="${homepage}" label="Website" remote>
             ${link}
-        </movie-button>
-        <movie-button href="https://www.imdb.com/title/${imdb_id}/" label="IMDB" remote>
+        </movie-button>`}
+        ${imdb_id && `<movie-button href="https://www.imdb.com/title/${imdb_id}/" label="IMDB" remote>
             ${imdb}
-        </movie-button>
-        <movie-button href="https://www.youtube.com/watch?v=${trailer.key}/" label="Trailer" remote>
+        </movie-button>`}
+        ${trailer?.key && `<movie-button href="https://www.youtube.com/watch?v=${trailer.key}/" label="Trailer" remote>
             ${play}
-        </movie-button>
+        </movie-button>`}
     </div>
     <movie-button href="/" label="Back">
 

@@ -43,4 +43,9 @@ const getPerson = async function(id) {
   return response.body
 }
 
-export { getCredits, getMovie, getMovies, getVideos, getRecommendations, getPerson, getMovieWithCast }
+const searchMovies = async function(q, page) {
+  const response = await tiny.get({url: `${baseUrl}/search/movie?query=${q}&page=${page}&api_key=${TMDB_API_KEY}`})
+  return response.body
+}
+
+export { getCredits, getMovie, getMovies, getVideos, getRecommendations, getPerson, getMovieWithCast, searchMovies }
