@@ -13,10 +13,10 @@ export default function Element ({ html, state }) {
       }
     </style>
     <div class="flex mie-auto">
-        <movie-button href="${homepage}" label="Website" remote>
+        ${homepage && `<movie-button href="${homepage}" label="Website" remote>
             ${link}
-        </movie-button>
-        <movie-button href="https://www.imdb.com/title/${imdb_id}/" label="IMDB" remote>
+        </movie-button>`}
+        <movie-button href="https://www.imdb.com/name/${imdb_id}/" label="IMDB" remote>
             ${imdb}
         </movie-button>
     </div>
