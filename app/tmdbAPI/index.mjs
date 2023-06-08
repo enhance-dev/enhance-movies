@@ -3,7 +3,8 @@ import tiny from 'tiny-json-http'
 const {
   TMDB_API_KEY,
   TMDB_API_BASE_URL,
-  TMDB_API_VERSION
+  TMDB_API_VERSION,
+  TMDB_API_TOKEN
 } = process.env
 
 const baseUrl = `${TMDB_API_BASE_URL}/${TMDB_API_VERSION}`
@@ -53,8 +54,15 @@ const getGenres = async function() {
   return response.body.genres
 }
 
-const getGenreMovies = async function(id, page) {
-  const response = await tiny.get({url: `${baseUrl}/discover/movie?with_genre=${id}&page=${page}&api_key=${TMDB_API_KEY}`})
+const getGenreMovies = async function(id, page, sort_by) {
+  const response = await tiny.get(
+    {
+      url: `${baseUrl}/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=${sort_by}&with_genres=${id}`,
+      headers: {
+        'Authorization': `Bearer ${TMDB_API_TOKEN}`,
+        'accept': 'application/json'
+      }
+    })
   return response.body
 }
 
