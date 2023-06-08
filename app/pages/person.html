@@ -1,7 +1,7 @@
-<div class="font-sans">
-    <movie-header></movie-header>
-    <movie-content-wrapper>
-      <movie-page-wrapper>
+<movie-layout class="font-sans">
+    <movie-header slot="header"></movie-header>
+    <movie-content-wrapper slot="main">
+        <movie-page-wrapper>
         <movie-summary-wrapper>
             <movie-page-padding>
                 <movie-person-image width="780"></movie-person-image>
@@ -19,7 +19,7 @@
                 <movie-pagination></movie-pagination>
             </movie-page-padding>
         </movie-page-wrapper>
-        <movie-footer></movie-footer>
       </movie-page-wrapper>
       </movie-content-wrapper>
-  </div>
+      <movie-footer slot="footer"></movie-footer>
+    </movie-layout>
