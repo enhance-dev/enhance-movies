@@ -48,4 +48,14 @@ const searchMovies = async function(q, page) {
   return response.body
 }
 
-export { getCredits, getMovie, getMovies, getVideos, getRecommendations, getPerson, getMovieWithCast, searchMovies }
+const getGenres = async function() {
+  const response = await tiny.get({url: `${baseUrl}/genre/movie/list?api_key=${TMDB_API_KEY}`})
+  return response.body.genres
+}
+
+const getGenreMovies = async function(id, page) {
+  const response = await tiny.get({url: `${baseUrl}/discover/movie?with_genre=${id}&page=${page}&api_key=${TMDB_API_KEY}`})
+  return response.body
+}
+
+export { getCredits, getMovie, getMovies, getVideos, getRecommendations, getPerson, getMovieWithCast, searchMovies, getGenres, getGenreMovies }
