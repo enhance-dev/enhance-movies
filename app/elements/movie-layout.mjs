@@ -6,7 +6,6 @@ export default function MovieLayout ({ html }) {
         display: grid;
         grid-template-areas:
             'header'
-            'left-sidebar'
             'main'
             'footer';
         grid-template-rows: min-content min-content 1fr min-content;
@@ -16,6 +15,7 @@ export default function MovieLayout ({ html }) {
     }
     ::slotted([slot='left-sidebar']) {
         grid-area: left-sidebar;
+        display: none;
     }
     ::slotted([slot='main']) {
         grid-area: main;
@@ -31,6 +31,9 @@ export default function MovieLayout ({ html }) {
             'footer             footer' min-content
             / minmax(auto, var(--layout-max-sidebar-width, 16rem))
             minmax(var(--layout-min-content-width, 16rem), 1fr);
+        }
+        ::slotted([slot='left-sidebar']) {
+            display: block;
         }
     }
     </style>
