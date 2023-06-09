@@ -1,4 +1,4 @@
-export default function Element ({ html, state }) {
+export default function MoviePersonBiography ({ html, state }) {
   const { store } = state
   const { person } = store
   const { biography } = person

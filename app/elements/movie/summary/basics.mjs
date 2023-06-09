@@ -1,4 +1,4 @@
-export default function Element ({ html }) {
+export default function MovieSummaryBasics ({ html }) {
   return html`
     <style>
       :host {

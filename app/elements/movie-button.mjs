@@ -1,4 +1,4 @@
-export default function Element ({ html, state }) {
+export default function MovieButton ({ html, state }) {
   const { attrs } = state
   const { href, label } = attrs
   const remote = Object.keys(attrs).includes('remote')

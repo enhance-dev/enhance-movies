@@ -1,4 +1,4 @@
-export default function Element ({ html, state }) {
+export default function MovieSummaryRating ({ html, state }) {
   const { store } = state
   const { movie } = store
   const { vote_average } = movie

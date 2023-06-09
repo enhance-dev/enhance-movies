@@ -1,4 +1,4 @@
-export default function Element ({ html, state }) {
+export default function MoviePagination ({ html, state }) {
   const { store } = state
   const { baseUrl, shows } = store
   const { page, total_pages } = shows

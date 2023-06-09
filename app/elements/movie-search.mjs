@@ -1,4 +1,4 @@
-export default function Element ({ html, state }) {
+export default function MovieSearch ({ html, state }) {
   const { store } = state
   const { q = '' } = store
   return html`

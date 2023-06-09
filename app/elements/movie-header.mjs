@@ -1,4 +1,4 @@
-export default function Element ({ html }) {
+export default function MovieHeader ({ html }) {
   return html`
 <style>
   :host header {

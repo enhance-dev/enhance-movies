@@ -1,4 +1,4 @@
-export default function Element ({ html, state }) {
+export default function MovieGrid ({ html, state }) {
   const { store } = state
   const shows = store.shows.results.map((show, i) => `<movie-poster key="${i}"></movie-poster>`).join('')
   return html`
