@@ -62,7 +62,7 @@ export default function MovieHeader ({ html }) {
           for="burger-control"
           title="Open navigation">
           <svg height="24" width="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
+            <use xlink:href="#svg-hamburger">
           </svg>
       </label>
       <movie-sidebar id="docs-nav" class="absolute z-1"></movie-sidebar>
