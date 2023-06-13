@@ -11,6 +11,6 @@ export async function fetchMovies (req) {
     json: { title: {
       primary: name,
       secondary: 'movies'
-    }, shows, genres: req.genres, baseUrl }
+    }, shows, genres: req.genres, id, sort_by, baseUrl }
   }
 }
