@@ -2,7 +2,6 @@ import { getGenres } from '../tmdbAPI/index.mjs'
 import data from '@begin/data'
 
 export async function fetchGenres (req) {
-  console.time('genres')
   let results = await data.get({
     table: 'data',
     key: 'genres',
@@ -17,5 +16,4 @@ export async function fetchGenres (req) {
     })
   }
   req.genres = genres
-  console.timeEnd('genres')
 }
