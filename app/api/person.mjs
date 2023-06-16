@@ -1,7 +1,8 @@
 import { getMovieWithCast, getPerson } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
+import { getReferer } from '../middleware/referer.mjs'
 
-export let get = [fetchGenres, fetchPerson]
+export let get = [getReferer, fetchGenres, fetchPerson]
 
 export async function fetchPerson (req) {
   const { id, page = 1 } = req.query
@@ -11,6 +12,6 @@ export async function fetchPerson (req) {
     json: { title: {
       primary: "also enters in",
       secondary: "movies"
-    }, person, genres: req.genres, shows }
+    }, person, genres: req.genres, referer: req.referer, shows }
   }
 }

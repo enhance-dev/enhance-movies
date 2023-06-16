@@ -1,6 +1,6 @@
 export default function MovieSummaryLinks ({ html, state }) {
   const { store } = state
-  const { movie = {} } = store
+  const { movie = {}, referer = '/' } = store
   const { homepage, imdb_id, trailer } = movie
   return html`
     <style>
@@ -29,7 +29,7 @@ export default function MovieSummaryLinks ({ html, state }) {
             </svg>
         </movie-button>`}
     </div>
-    <movie-button href="/" label="Back">
+    <movie-button href="${referer}" label="Back">
 
     </movie-button>
   `
