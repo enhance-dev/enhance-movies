@@ -13,6 +13,13 @@ export default function Head () {
       <title>Enhance Movie</title>
       ${linkTag()}
       <link rel="icon" href="/_public/favicon.svg">
+      <style>
+        body {
+          background: var(--dark);
+          color: var(--light);
+        }
+      </style>
     </head>
+    <body class='font-sans leading3'>
 `
 }

@@ -1,15 +1,13 @@
 <movie-symbols></movie-symbols>
-<movie-layout class="font-sans">
-  <movie-header slot="header"></movie-header>
+<movie-header></movie-header>
+<movie-layout>
+  <movie-feature slot="header"></movie-feature>
   <movie-sidebar slot="left-sidebar"></movie-sidebar>
-  <movie-content-wrapper slot="main">
-    <movie-page-wrapper>
-      <movie-page-padding>
-        <movie-page-title></movie-page-title>
-        <movie-grid></movie-grid>
-        <movie-pagination></movie-pagination>
-      </movie-page-padding>
-    </movie-page-wrapper>
-    </movie-content-wrapper>
-    <movie-footer slot="footer"></movie-footer>
+  <div class="p0" slot="main">
+    <movie-page-title></movie-page-title>
+    <movie-collection></movie-collection>
+    <movie-pagination></movie-pagination>
+  </div>
+  <movie-footer slot="footer"></movie-footer>
 </movie-layout>
+<script src='/_public/browser/movie-trailer-modal.mjs'></script>

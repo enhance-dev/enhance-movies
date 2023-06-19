@@ -9,3 +9,6 @@ enhance/arc-plugin-enhance
 
 @begin
 appID 8K4RH89H
+
+@enhance-styles
+config styleguide.json
