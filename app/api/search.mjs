@@ -10,8 +10,8 @@ export async function fetchMovies (req) {
   const baseUrl = `search?q=${q}`
   return {
     json: { title: {
-      primary: q,
-      secondary: "search results"
+      primary: "Results for",
+      secondary: `‘${q}’`
     }, shows, genres: req.genres, referer: req.referer, baseUrl }
   }
 }

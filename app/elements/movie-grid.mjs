@@ -1,9 +1,10 @@
 export default function MovieGrid ({ html, state }) {
   const { store } = state
-  const shows = store.shows.results.map((show, i) => `<movie-poster key="${i}"></movie-poster>`).join('')
+  const shows = store.shows.results.map(({ id, poster_path, title, vote_average }) => `<movie-poster id="${id}" poster_path="${poster_path}" title="${title}" vote_average="${vote_average}"></movie-poster>`).join('')
+
   return html`
-<style>
-    :host {
+    <style>
+      :host {
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(5rem,12.5rem));
         grid-gap: 2rem 1rem;
@@ -11,10 +12,9 @@ export default function MovieGrid ({ html, state }) {
         align-content: space-between;
         align-items: start;
         margin: 2rem 0;
-    }
-</style>
-${shows}
-<slot></slot>
-`
+      }
+    </style>
+      ${shows}
+    <slot></slot>
+  `
 }
-

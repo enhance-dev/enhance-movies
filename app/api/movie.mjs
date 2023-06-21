@@ -16,7 +16,7 @@ export async function fetchMovie (req) {
   const baseUrl = `/movie?id=${id}`
   return {
     json: { title: {
-      primary: "recommended",
+      primary: "Recommended",
       secondary: "movies"
     }, movie, shows, genres: req.genres, referer: req.referer, baseUrl }
   }

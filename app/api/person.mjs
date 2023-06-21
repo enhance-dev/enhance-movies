@@ -10,8 +10,8 @@ export async function fetchPerson (req) {
   const shows = await getMovieWithCast(id, page)
   return {
     json: { title: {
-      primary: "also enters in",
-      secondary: "movies"
+      primary: "Also appears in",
+      secondary: ""
     }, person, genres: req.genres, referer: req.referer, shows }
   }
 }

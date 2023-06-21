@@ -1,7 +1,6 @@
 export default function MoviePoster ({ html, state }) {
-  const { attrs, store } = state
-  const { key } = attrs
-  const {id, poster_path, title, vote_average} = store.shows.results[key]
+  const { attrs } = state
+  const { id, poster_path, title, vote_average } = attrs
 
   return html`
     <style>

@@ -10,7 +10,7 @@ export async function fetchMovies (req) {
   const baseUrl = `/genre?id=${id}&name=${name}&sort_by=${sort_by}`
   return {
     json: { title: {
-      primary: name,
+      primary: `${name.charAt(0).toUpperCase()}${name.substring(1)}`,
       secondary: 'movies'
     }, shows, genres: req.genres, referer: req.referer, id, sort_by, baseUrl }
   }

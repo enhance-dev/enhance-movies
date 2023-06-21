@@ -2,11 +2,23 @@ export default function MovieSortSelect ({ html, state }) {
   const { store } = state
   const { id, shows, sort_by, title } = store
   return html`
+    <style>
+      select {
+        background: var(--dark);
+        border-color: var(--pink-600);
+        color: var(--light);
+        outline-offset: 4px;
+      }
+
+      select:focus {
+        outline: 2px solid var(--pink-600);
+      }
+    </style>
     <form class="mb-3">
         <input type="hidden" name="id" value="${id}"/>
         <input type="hidden" name="name" value="${title.primary}"/>
         <input type="hidden" name="page" value="${shows.page}"/>
-        <select name="sort_by" class="mie-1">
+        <select name="sort_by" class="mie-1 p-5 border2 border-solid radius1">
             <option ${sort_by === "popularity.desc" ? "selected" : ""} value="popularity.desc">Popularity</option>
             <option ${sort_by === "vote_average.desc" ? "selected" : ""} value="vote_average.desc">Votes Average</option>
             <option ${sort_by === "original_title.asc" ? "selected" : ""} value="original_title.asc">Original Title</option>
@@ -41,4 +53,3 @@ export default function MovieSortSelect ({ html, state }) {
     </script>
 `
 }
-
