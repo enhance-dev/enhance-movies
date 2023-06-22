@@ -11,8 +11,8 @@ export default function MovieTrailerModal({ html, state }) {
       dialog {
         background: transparent;
         padding: var(--space-0);
-        inline-size: 100vw;
-        max-block-size: 90vh;
+        inline-size: 85vw;
+        max-block-size: 80vh;
         aspect-ratio: var(--aspect-ratio);
       }
 
