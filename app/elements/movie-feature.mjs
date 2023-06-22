@@ -7,7 +7,7 @@ export default function MovieFeature({ html, state }) {
   return html`
     <style>
       .backdrop {
-        background-image: url("https://image.tmdb.org/t/p/original/${backdrop_path}");
+        background-image: url("https://image.tmdb.org/t/p/w1280/${backdrop_path}");
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.333;
@@ -17,7 +17,7 @@ export default function MovieFeature({ html, state }) {
         max-width: 52ch;
       }
     </style>
-    <section class="pi0 pb4 relative">
+    <section class="pi0 pis4-lg pb4 relative">
       <h1 class="text4 font-light mbe0">${title}</h1>
       <p>${overview}</p>
       <div class="mb4 flex gap0">

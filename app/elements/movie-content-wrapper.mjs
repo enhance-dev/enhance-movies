@@ -2,8 +2,7 @@ export default function MovieContentWrapper ({ html }) {
   return html`
     <style>
       :host {
-          padding-top: 72px;
-          padding-bottom: 4rem;
+          padding-bottom: var(--space-4);
           width: 100%;
           min-height: 100vh;
           display: flex;
@@ -14,4 +13,3 @@ export default function MovieContentWrapper ({ html }) {
     <slot></slot>
   `
 }
-

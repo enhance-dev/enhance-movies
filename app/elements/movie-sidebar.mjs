@@ -4,7 +4,6 @@ export default function MovieSidebar ({ html, state }) {
   return html`
     <style>
         :host {
-            padding-top: 72px;
             min-height: 100vh;
         }
     </style>

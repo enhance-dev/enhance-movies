@@ -15,7 +15,6 @@ export default function MovieCollection ({ html, state }) {
       }
     </style>
     <layout-collection
-      class='p0'
       gap='var(--space-0)'
       snap-align='start'
       snap-type='mandatory'

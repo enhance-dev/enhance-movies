@@ -1,36 +1,24 @@
 export default function MovieSummaryLinks ({ html, state }) {
   const { store } = state
-  const { movie = {}, referer = '/' } = store
-  const { homepage, imdb_id, trailer } = movie
+  const { movie = {} } = store
+  const { homepage, imdb_id, trailer, id } = movie
+  const trailerUrl = `https://www.youtube.com/embed/${trailer?.key}?rel=0&autoplay=0&showinfo=0`
+
   return html`
-    <style>
-      :host {
-          display: flex;
-          align-items: center;
-      }
-      :host div>*:not(:last-child) {
-        margin-right: 0.5rem;
-      }
-    </style>
-    <div class="flex mie-auto">
-        ${homepage && `<movie-button href="${homepage}" label="Website" remote>
-            <svg slot="icon" height="24" width="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <div class="flex gap-2 mie-auto">
+        ${homepage && `<secondary-link-button href="${homepage}">
+            Website
+            <svg height="20" width="14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
               <use xlink:href="#svg-link">
             </svg>
-        </movie-button>`}
-        ${imdb_id && `<movie-button href="https://www.imdb.com/title/${imdb_id}/" label="IMDB" remote>
-            <svg slot="icon" height="24" width="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </secondary-link-button>`}
+        ${imdb_id && `<secondary-link-button href="https://www.imdb.com/title/${imdb_id}/">
+            IMDB
+            <svg height="20" width="14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
               <use xlink:href="#svg-imdb">
             </svg>
-        </movie-button>`}
-        ${trailer?.key && `<movie-button href="https://www.youtube.com/watch?v=${trailer.key}/" label="Trailer" remote>
-            <svg slot="icon" height="24" width="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-              <use xlink:href="#svg-play-button">
-            </svg>
-        </movie-button>`}
+        </secondary-link-button>`}
+        ${trailer?.key ? `<movie-trailer-modal href="${trailerUrl}" id=${id}"></movie-trailer-modal>` : ''}
     </div>
-    <movie-button href="${referer}" label="Back">
-
-    </movie-button>
   `
 }

@@ -6,7 +6,7 @@ export default function MovieGrid ({ html, state }) {
     <style>
       :host {
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(5rem,12.5rem));
+        grid-template-columns: repeat(auto-fit, minmax(max(12.5%, 250px), 1fr));
         grid-gap: 2rem 1rem;
         justify-content: space-evenly;
         align-content: space-between;

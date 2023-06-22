@@ -19,11 +19,12 @@ export default function MovieLayout ({ html }) {
     }
     ::slotted([slot='main']) {
         grid-area: main;
+        min-width: 0; /* Avoid overflow issues w/ scrolling children */
     }
     ::slotted([slot='footer']) {
         grid-area: footer;
     }
-    @media (min-width: 26rem) {
+    @media (min-width: 48em) {
         :host {
             grid-template:
             'header             header' min-content
@@ -43,4 +44,3 @@ export default function MovieLayout ({ html }) {
     <slot name="footer"></slot>
 `
 }
-
