@@ -25,7 +25,7 @@ export default function MovieSidebar ({ html, state }) {
 
         .active {
           outline-offset: 2px;
-          background-color: var(--pink-700);
+          background: linear-gradient(to right, var(--pink-700), transparent);
         }
     </style>
     <div class="p0 flex">

@@ -4,12 +4,12 @@ export default function MovieSortSelect ({ html, state }) {
   return html`
     <style>
       select {
-        background: var(--dark);
-        border-color: var(--pink-600);
+        background: var(--grey-700);
         color: var(--light);
         outline-offset: 4px;
       }
 
+      select:hover, 
       select:focus {
         outline: 2px solid var(--pink-600);
       }
