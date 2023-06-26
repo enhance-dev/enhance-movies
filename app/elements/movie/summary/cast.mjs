@@ -22,6 +22,10 @@ export default function MovieSummaryCast ({ html, state }) {
         .cast-container {
           margin-inline: calc(var(--space--6) * -1);
           padding-inline: var(--space--6);
+          scrollbar-width: none;
+        }
+        .cast-container::webkit-scrollbar {
+          display: none;
         }
       </style>
       <typography-h3>Cast</typography-h3>

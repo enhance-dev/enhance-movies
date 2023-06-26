@@ -1,23 +1,28 @@
 export default function MovieHeader ({ html }) {
   return html`
 <style>
-  :host header {
+  :host {
+    display: block;
+    background-color: var(--pink-700);
     box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    padding-inline: var(--space-0);
+    height: var(--nav-bar-height);
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 2;
+    --nav-bar-height: 4rem;
   }
 
-  :host div {
-    min-height: 64px;
-    padding: 0 24px;
-    background-color: var(--pink-700);
+  nav {
+    height: var(--nav-bar-height);
   }
 
   #docs-nav {
-    display: block;
-    position: fixed;
-    background: white;
-    left: -100vw;
-    bottom: 0;
-    overflow-y: auto;
+    background-color: var(--pink-700);
+    inset-block-start: var(--nav-bar-height);
+    inset-block-end: 0;
+    inset-inline-start: -100vw;
+    overflow-y: scroll;
     width: 100vw;
     -webkit-transition: left 0.2s ease;
     transition: left 0.2s ease;
@@ -27,15 +32,15 @@ export default function MovieHeader ({ html }) {
     display: block;
     position: absolute;
     opacity: 0;
-    height: 0.0001px;
-    width: 0.0001px;
+    block-size: 0.0001px;
+    inline-size: 0.0001px;
   }
   #burger-control:checked ~ #docs-nav {
     display: block;
-    left: 0vw;
+    inset-inline-start: 0vw;
   }
 
-  @media only screen and (min-width: 26em) {
+  @media only screen and (min-width: 48em) {
     #hamburger,
     #docs-nav {
       display: none !important; /* even when :checked */
@@ -47,9 +52,9 @@ export default function MovieHeader ({ html }) {
     }
   }
 </style>
-<header class="sticky inset-bs-0 si-100 z1">
+<header>
   <div class="flex align-items-center justify-content-between">
-    <div class="flex align-items-center">
+    <nav class="flex align-items-center">
       <input
         id="burger-control"
         class="absolute opacity-0 z-1"
@@ -66,8 +71,8 @@ export default function MovieHeader ({ html }) {
             <use xlink:href="#svg-hamburger">
           </svg>
       </label>
-      <movie-sidebar id="docs-nav" class="absolute z-1"></movie-sidebar>
-    </div>
+      <movie-sidebar id="docs-nav" class="fixed z-1"></movie-sidebar>
+    </nav>
     <div class="flex align-items-center">
       <movie-search></movie-search>
     </div>

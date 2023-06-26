@@ -8,10 +8,9 @@ export default function MovieLayout ({ html }) {
             'header'
             'main'
             'footer';
-        grid-template-rows: min-content min-content 1fr min-content;
+        grid-template-rows: auto min-content 1fr min-content;
     }
     ::slotted([slot='header']) {
-       margin-block-end: var(--space-0);
        grid-area: header;
     }
     ::slotted([slot='left-sidebar']) {
