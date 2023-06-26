@@ -15,7 +15,7 @@ export default function MovieSummaryWrapper ({ html, state }) {
     }
 
     section {
-      margin-top: calc(var(--space-0) * -1);
+      margin-block-start: calc(var(--space-0) * -1);
       display: block;
       max-width: 64rem;
     }
@@ -31,7 +31,7 @@ export default function MovieSummaryWrapper ({ html, state }) {
       section {
         display: grid;
         grid-template-columns: 40% 60%;
-        margin-bottom: 2.5rem;
+        margin-block-end: 2.5rem;
       }
     }
     </style>

@@ -7,11 +7,11 @@ export default function MovieGrid ({ html, state }) {
       :host {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(max(12.5%, 250px), 1fr));
-        grid-gap: 2rem 1rem;
+        grid-gap: var(--space-2) var(--space-0);
         justify-content: space-evenly;
         align-content: space-between;
         align-items: start;
-        margin: 2rem 0;
+        margin-block: var(--space-2);
       }
     </style>
       ${shows}

@@ -6,10 +6,10 @@ export default function MovieSummarySynopsis ({ html, state }) {
       <style>
         :host {
             display: block;
-            margin-bottom: 1.5rem;
+            margin-block-end: var(--space-2);
         }
       </style>
-      <typography-h3>The Synopsis</typography-h3>
+      <typography-h3>Synopsis</typography-h3>
       <p class="leading4">${overview}</p>
     `
 }

@@ -1,14 +1,11 @@
 export default function MovieSummaryRating ({ html, state }) {
   const { store } = state
   const { movie } = store
-  const { vote_average } = movie
+  let { vote_average } = movie
+
+  if (vote_average === 0) vote_average = 'Not yet rated'
+
   return html`
-    <style>
-    :host p {
-        color: var(--palette-warning-main);
-    }
-    </style>
-    <p class="text-1 font-bold leading-none uppercase">${vote_average}</p>
+    <p class="text-1 font-bold uppercase">☆ ${vote_average}</p>
   `
 }
-

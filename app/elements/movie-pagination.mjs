@@ -7,7 +7,7 @@ export default function MoviePagination ({ html, state }) {
   const nextUrl = `${baseUrl}&page=${pageInt + 1}`
   return html`
     <div class="flex align-items-center justify-content-between">
-        <movie-button class="${pageInt === 1 ? 'invisible' : ''}" href="${prevUrl}" label="Prev"></movie-button>
-        <movie-button class="${pageInt === total_pages ? 'invisible' : ''}" href="${nextUrl}" label="Next"></movie-button>
+        <secondary-link-button class="${pageInt === 1 ? 'invisible' : ''}" href="${prevUrl}">Prev</secondary-link-button>
+        <secondary-link-button class="${pageInt === total_pages ? 'invisible' : ''}" href="${nextUrl}">Next</secondary-link-button>
     </div>`
 }

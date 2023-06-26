@@ -1,6 +1,8 @@
 export default function MoviePoster ({ html, state }) {
   const { attrs } = state
-  const { id, poster_path, title, vote_average } = attrs
+  let { id, poster_path, title, vote_average } = attrs
+
+  if (vote_average === 0) vote_average = 'Not yet rated'
 
   return html`
     <style>
@@ -41,6 +43,6 @@ export default function MoviePoster ({ html, state }) {
         />
       </div>
       <h2 class="mbs0 mbe-6">${title}</h2>
-      <span class="text-1">${vote_average}</span>
+      <span class="text-1">☆ ${vote_average}</span>
     </a>`
 }

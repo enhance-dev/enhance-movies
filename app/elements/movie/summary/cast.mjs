@@ -6,7 +6,7 @@ export default function MovieSummaryCast ({ html, state }) {
       <style>
         :host {
             display: block;
-            margin-bottom: 2.5rem;
+            margin-block-end: var(--space-2);
             max-width: 100%;
         }
         :host a {
@@ -24,7 +24,7 @@ export default function MovieSummaryCast ({ html, state }) {
           padding-inline: var(--space--6);
         }
       </style>
-      <typography-h3>The Cast</typography-h3>
+      <typography-h3>Cast</typography-h3>
         <div class="flex pb-4 gap0 cast-container overflow-x-scroll">
             ${cast.map(actor => `<a href="/person?id=${actor.id}&page=1" class="block flex-shrink-0 overflow-hidden">
               <img alt="${actor.name}" src="https://image.tmdb.org/t/p/w185${actor.profile_path}" class="object-cover">

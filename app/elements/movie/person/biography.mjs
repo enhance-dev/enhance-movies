@@ -6,10 +6,10 @@ export default function MoviePersonBiography ({ html, state }) {
         <style>
           :host {
               display: block;
-              margin-bottom: 1.5rem;
+              margin-block-end: var(--space-2);
           }
         </style>
-        <typography-h3>The Biography</typography-h3>
-        <p class="text-1 font-medium leading4">${biography}</p>
+        <typography-h3>Biography</typography-h3>
+        <p class="leading4">${biography}</p>
       `
 }
