@@ -55,7 +55,7 @@ export default function MovieTrailerModal({ html, state }) {
           &times;
         </button>
       </form>
-      <iframe allowfullscreen allow="fullscreen; autoplay" src="${href}" class="si-100 sb-100"></iframe>
+      <iframe allowfullscreen allow="fullscreen; autoplay" src="${href}" loading="lazy" class="si-100 sb-100"></iframe>
     </dialog>
   `
 }
