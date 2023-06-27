@@ -42,7 +42,7 @@ export default function MoviePoster ({ html, state }) {
     <a href="/movie?id=${id}&page=1" class="relative flex flex-col">
       <div class="relative image-wrapper">
         <img
-          src="https://image.tmdb.org/t/p/w500${poster_path}"
+          src="https://image.tmdb.org/t/p/w342${poster_path}"
           alt="${title}"
         />
       </div>
