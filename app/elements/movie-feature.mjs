@@ -2,7 +2,7 @@ export default function MovieFeature({ html, state }) {
   const { store } = state
   const { featured } = store
   const { backdrop_path, title, overview, id, trailer } = featured
-  const trailerUrl = `https://www.youtube.com/embed/${trailer.key}?rel=0&autoplay=0&showinfo=0`
+  const trailerUrl = trailer?.key && `https://www.youtube.com/embed/${trailer.key}?rel=0&autoplay=0&showinfo=0`
 
   return html`
     <style>
