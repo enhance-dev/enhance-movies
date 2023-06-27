@@ -15,14 +15,22 @@ export default function MovieFeature({ html, state }) {
       }
 
       .backdrop {
-        background-image: url("https://image.tmdb.org/t/p/w1280/${backdrop_path}");
+        background-image: url("https://image.tmdb.org/t/p/w500${backdrop_path}");
         background-size: cover;
         background-repeat: no-repeat;
+        filter: blur(2px);
         opacity: 0.333;
       }
 
       p {
         max-width: 52ch;
+      }
+
+      @media screen and (min-width: 48em) {
+        .backdrop {
+          background-image: url("https://image.tmdb.org/t/p/w1280${backdrop_path}");
+          filter: none;
+        }
       }
     </style>
     <section class="pi0 pis4-lg pb4 relative">
