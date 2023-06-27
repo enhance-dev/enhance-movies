@@ -6,6 +6,14 @@ export default function MovieFeature({ html, state }) {
 
   return html`
     <style>
+      section {
+        animation: 1s fadein var(--easing);
+      }
+
+      .raise {
+        animation: 1s raise var(--easing);
+      }
+
       .backdrop {
         background-image: url("https://image.tmdb.org/t/p/w1280/${backdrop_path}");
         background-size: cover;
@@ -18,15 +26,17 @@ export default function MovieFeature({ html, state }) {
       }
     </style>
     <section class="pi0 pis4-lg pb4 relative">
-      <h1 class="text4 font-light mbe0">${title}</h1>
-      <p>${overview}</p>
-      <div class="mb4 flex gap0">
-        <primary-link-button href="/movie?id=${id}">
-          More Info
-        </primary-link-button>
-        ${trailer ? `
-          <movie-trailer-modal href="${trailerUrl}" id="${id}"></movie-trailer-modal>
-        ` : ''}
+      <div class='raise'>
+        <h1 class="text4 font-light mbe0">${title}</h1>
+        <p>${overview}</p>
+        <div class="mb4 flex gap0">
+          <primary-link-button href="/movie?id=${id}">
+            More Info
+          </primary-link-button>
+          ${trailer ? `
+            <movie-trailer-modal href="${trailerUrl}" id="${id}"></movie-trailer-modal>
+          ` : ''}
+        </div>
       </div>
       <div class="backdrop absolute inset-0 z-1"></div>
     </section>

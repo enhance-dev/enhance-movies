@@ -8,6 +8,9 @@ export default function MovieCollection ({ html, state }) {
         margin-inline: calc(var(--space-0) * -1);
         scroll-padding: var(--space-0);
         container-type: inline-size;
+        animation: 2s fadein var(--easing), 1s slide var(--easing);
+        animation-delay: 0.25s;
+        animation-fill-mode: both;
       }
 
       movie-poster {

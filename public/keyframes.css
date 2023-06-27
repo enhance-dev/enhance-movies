@@ -1,0 +1,26 @@
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes raise {
+  from {
+    translate: 0 var(--space-2);
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes slide {
+  from {
+    translate: var(--space-2) 0;
+  }
+  to {
+    translate: 0 0;
+  }
+}

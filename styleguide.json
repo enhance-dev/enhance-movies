@@ -33,8 +33,7 @@
     "white": "#fff"
   },
   "properties": {
-    "site-width": "90vw",
-    "site-max-width": "1560px"
+    "easing": "cubic-bezier(0.43, 0.29, 0.47, 1)"
   },
   "grid": {
     "steps": 6

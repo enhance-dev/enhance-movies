@@ -12,6 +12,9 @@ export default function MovieGrid ({ html, state }) {
         align-content: space-between;
         align-items: start;
         margin-block: var(--space-2);
+        animation: 2s fadein var(--easing), 1s raise var(--easing);
+        animation-delay: 0.25s;
+        animation-fill-mode: both;
       }
     </style>
       ${shows}

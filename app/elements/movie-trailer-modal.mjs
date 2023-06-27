@@ -5,7 +5,7 @@ export default function MovieTrailerModal({ html, state }) {
   return html`
     <style>
       :host {
-      --aspect-ratio: 16 / 9;
+        --aspect-ratio: 16 / 9;
       }
 
       dialog {
@@ -14,6 +14,10 @@ export default function MovieTrailerModal({ html, state }) {
         inline-size: 85vw;
         max-block-size: 80vh;
         aspect-ratio: var(--aspect-ratio);
+      }
+
+      dialog[open] {
+        animation: 0.5s fadein var(--easing);
       }
 
       dialog::backdrop {
