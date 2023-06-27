@@ -33,7 +33,7 @@
     "white": "#fff"
   },
   "properties": {
-    "easing": "cubic-bezier(0.43, 0.29, 0.47, 1)"
+    "easeOutQuint": "cubic-bezier(0.23,1,0.32,1)"
   },
   "grid": {
     "steps": 6

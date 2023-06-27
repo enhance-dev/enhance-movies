@@ -12,15 +12,15 @@ export default function MovieSummaryWrapper ({ html, state }) {
         position: relative;
         background-image: url("https://image.tmdb.org/t/p/w1280/${backdrop_path}");
         background-size: cover;
-        animation: 1s fadein var(--easing);
+        animation: 0.5s fadein var(--easeOutQuint);
       }
 
       section {
         margin-block-start: calc(var(--space-0) * -1);
         display: block;
         max-width: 64rem;
-        animation: 1s fadein var(--easing), 1s raise var(--easing);
-        animation-delay: 0.5s;
+        animation: 1s fadein var(--easeOutQuint), 1s raise var(--easeOutQuint);
+        animation-delay: 0.333s;
         animation-fill-mode: backwards;
       }
 
@@ -29,8 +29,8 @@ export default function MovieSummaryWrapper ({ html, state }) {
         background-image: linear-gradient(to bottom, transparent, var(--dark)), linear-gradient(to right, var(--dark), transparent);
         backdrop-filter: ${backdropFilter};
         -webkit-backdrop-filter: ${backdropFilter};
-        animation: 1s fadein var(--easing);
-        animation-delay: 0.25s;
+        animation: 1s fadein var(--easeOutQuint);
+        animation-delay: 0.5s;
         animation-fill-mode: backwards;
       }
 

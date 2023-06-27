@@ -17,7 +17,7 @@ export default function MovieTrailerModal({ html, state }) {
       }
 
       dialog[open] {
-        animation: 0.5s fadein var(--easing);
+        animation: 0.5s fadein var(--easeOutQuint);
       }
 
       dialog::backdrop {

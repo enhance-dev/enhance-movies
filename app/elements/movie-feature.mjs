@@ -8,11 +8,11 @@ export default function MovieFeature({ html, state }) {
   return html`
     <style>
       section {
-        animation: 1s fadein var(--easing);
+        animation: 1s fadein var(--easeOutQuint);
       }
 
       .raise {
-        animation: 1s raise var(--easing);
+        animation: 1s raise var(--easeOutQuint);
       }
 
       .backdrop {
