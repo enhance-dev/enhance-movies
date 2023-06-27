@@ -2,7 +2,11 @@ export default function MoviePoster ({ html, state }) {
   const { attrs } = state
   let { id, poster_path, title, vote_average } = attrs
 
-  if (vote_average === 0) vote_average = 'Not yet rated'
+  if (vote_average === '0') {
+    vote_average = 'Not yet rated'
+  } else {
+    vote_average = Number(vote_average).toFixed(1)
+  }
 
   return html`
     <style>
