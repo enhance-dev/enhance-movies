@@ -39,7 +39,7 @@ export default function MovieFeature({ html, state }) {
         <p>${overview}</p>
         <div class="mb4 flex gap0">
           <primary-link-button href="/movie?id=${id}">
-            More Info
+            View Details
           </primary-link-button>
           ${trailer ? `
             <movie-trailer-modal href="${trailerUrl}" id="${id}"></movie-trailer-modal>
