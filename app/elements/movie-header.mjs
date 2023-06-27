@@ -17,7 +17,7 @@ export default function MovieHeader ({ html }) {
     height: var(--nav-bar-height);
   }
 
-  #docs-nav {
+  #mobile-nav {
     background-color: var(--pink-700);
     inset-block-start: var(--nav-bar-height);
     inset-block-end: 0;
@@ -35,21 +35,27 @@ export default function MovieHeader ({ html }) {
     block-size: 0.0001px;
     inline-size: 0.0001px;
   }
-  #burger-control:checked ~ #docs-nav {
+  #burger-control:checked ~ #mobile-nav {
     display: block;
     inset-inline-start: 0vw;
   }
 
   @media only screen and (min-width: 48em) {
     #hamburger,
-    #docs-nav {
+    #mobile-nav {
       display: none !important; /* even when :checked */
     }
 
-    #docs-nav {
+    #mobile-nav {
       -webkit-transition: initial;
       transition: initial;
     }
+  }
+
+  img {
+    width: 2rem;
+    aspect-ratio: 136 / 124;
+    inset-block-start: -0.25rem;
   }
 </style>
 <header>
@@ -64,14 +70,20 @@ export default function MovieHeader ({ html }) {
         aria-label="Open navigation" />
       <label
           id="hamburger"
-          class="cursor-pointer relative"
+          class="cursor-pointer relative pie0"
           for="burger-control"
           title="Open navigation">
           <svg height="24" width="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <use xlink:href="#svg-hamburger">
           </svg>
       </label>
-      <movie-sidebar id="docs-nav" class="fixed z-1"></movie-sidebar>
+      <a href='/'>
+        <h1 class='font-semibold flex gap-2 align-items-center'>
+          <img class='hidden inline-block-lg relative' src='/_public/favicon.svg' alt='' />
+          Enhance Movies
+        </h1>
+      </a>
+      <movie-sidebar id="mobile-nav" class="fixed z-1"></movie-sidebar>
     </nav>
     <div class="flex align-items-center">
       <movie-search></movie-search>
