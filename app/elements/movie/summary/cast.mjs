@@ -31,8 +31,8 @@ export default function MovieSummaryCast ({ html, state }) {
       <typography-h3>Cast</typography-h3>
         <div class="flex pb-4 gap0 cast-container overflow-x-scroll">
             ${cast.map(actor => `<a href="/person?id=${actor.id}&page=1" class="block flex-shrink-0 overflow-hidden">
-              <img alt="${actor.name}" src="https://image.tmdb.org/t/p/w185${actor.profile_path}" title="${actor.name}"class="object-cover">
-            </a>`).join('')}
+              <img alt="${actor.name}" src="${actor.profile_path ? `https://image.tmdb.org/t/p/w185${actor.profile_path}` : '/_public/generic-avatar.jpg'}" title="${actor.name}"class="object-cover">
+            </img>`).join('')}
         </div>
     `
 }
