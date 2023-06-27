@@ -2,7 +2,8 @@ export default function MovieFeature({ html, state }) {
   const { store } = state
   const { featured } = store
   const { backdrop_path, title, overview, id, trailer } = featured
-  const trailerUrl = trailer?.key && `https://www.youtube.com/embed/${trailer.key}?rel=0&autoplay=0&showinfo=0`
+  const embeddedTrailerUrl = trailer?.key && `https://www.youtube.com/embed/${trailer.key}?rel=0&autoplay=0&showinfo=0`
+  const trailerUrl = trailer?.key && `https://www.youtube.com/watch?v=${trailer.key}`
 
   return html`
     <style>
@@ -42,7 +43,7 @@ export default function MovieFeature({ html, state }) {
             View Details
           </primary-link-button>
           ${trailer ? `
-            <movie-trailer-modal href="${trailerUrl}" id="${id}"></movie-trailer-modal>
+            <movie-trailer-modal embedded="${embeddedTrailerUrl}" trailer="${trailerUrl}" id="${id}"></movie-trailer-modal>
           ` : ''}
         </div>
       </div>

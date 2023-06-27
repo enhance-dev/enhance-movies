@@ -1,6 +1,6 @@
 export default function MovieTrailerModal({ html, state }) {
   const { attrs } = state
-  const { id, href } = attrs
+  const { id, embedded, trailer } = attrs
 
   return html`
     <style>
@@ -43,7 +43,7 @@ export default function MovieTrailerModal({ html, state }) {
         aspect-ratio: var(--aspect-ratio);
       }
     </style>
-    <secondary-link-button href="${href}" data-movie="${id}">
+    <secondary-link-button href="${trailer}" data-movie="${id}">
       Trailer
       <svg height="20" width="14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
         <use xlink:href="#svg-play-button">
@@ -55,7 +55,7 @@ export default function MovieTrailerModal({ html, state }) {
           &times;
         </button>
       </form>
-      <iframe allowfullscreen allow="fullscreen; autoplay" src="${href}" loading="lazy" class="si-100 sb-100"></iframe>
+      <iframe allowfullscreen allow="fullscreen; autoplay" src="${embedded}" loading="lazy" class="si-100 sb-100"></iframe>
     </dialog>
   `
 }
