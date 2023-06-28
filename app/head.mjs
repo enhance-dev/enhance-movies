@@ -11,6 +11,7 @@ export default function Head () {
         <meta name="view-transition" content="same-origin" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="A demo application built with Enhance, the HTML first framework. Powered by Begin and The Movies DB." />
+        <meta name="theme-color" content="#a0094a"/>
         <title>Enhance Movies</title>
         <link rel="stylesheet" href="/_public/keyframes.css" />
         ${linkTag()}
