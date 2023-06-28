@@ -15,6 +15,8 @@ export default function Head () {
         <link rel="stylesheet" href="/_public/keyframes.css" />
         ${linkTag()}
         <link rel="icon" href="/_public/favicon.svg" />
+        <link rel="manifest" href="/_public/app.webmanifest" />
+        <script async type="module" src="/_public/browser/sw.mjs"></script>
         <style>
           :root {
             color-scheme: dark;

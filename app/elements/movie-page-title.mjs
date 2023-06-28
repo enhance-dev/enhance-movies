@@ -3,8 +3,6 @@ export default function MoviePageTitle ({ html, state }) {
   const { title = {}, shows = [] } = store
   const { primary, secondary } = title
 
-  console.log({ store })
-
   const content = shows?.results?.length
     ? `<h1 class="text2 font-medium">${primary} ${secondary}</h1>`
     : ``
