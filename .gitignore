@@ -6,6 +6,7 @@ package-lock.json
 .DS_Store
 .enhance/
 public/static.json
+public/browser
 sam.json
 sam.yaml
 .env
