@@ -9,6 +9,13 @@ export default function MovieSortSelect ({ html, state }) {
         outline-offset: 4px;
       }
 
+      @media (prefers-color-scheme: light) {
+        select {
+          background: var(--grey-100);
+          color: var(--dark);
+        }
+      }
+
       select:hover, 
       select:focus {
         outline: 2px solid var(--pink-600);

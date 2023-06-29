@@ -4,6 +4,7 @@ export default function MovieSummaryWrapper ({ html, state }) {
   const { backdrop_path = '' } = movie
 
   const backdropFilter = `${backdrop_path ? 'blur(2px) brightness(80%)' : 'none' }`
+  const backdropFilterLight = `${backdrop_path ? 'blur(6px) brightness(120%) contrast(66%)' : 'none' }`
 
   return html`
     <style>
@@ -37,6 +38,8 @@ export default function MovieSummaryWrapper ({ html, state }) {
       @media (prefers-color-scheme: light) {
         .fadeout {
           background-image: linear-gradient(to bottom, transparent, var(--light)), linear-gradient(to right, var(--light), transparent);
+          backdrop-filter: ${backdropFilterLight};
+          -webkit-backdrop-filter: ${backdropFilterLight};
         }
       }
 

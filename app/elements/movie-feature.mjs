@@ -25,7 +25,7 @@ export default function MovieFeature({ html, state }) {
 
       @media (prefers-color-scheme: light) {
         .backdrop {
-          opacity: 0.2;
+          opacity: 0.125;
         }
       }
 
