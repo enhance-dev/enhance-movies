@@ -36,13 +36,20 @@ export default function Head () {
         <script async type="module" src="/_public/browser/sw.mjs"></script>
         <style>
           :root {
-            color-scheme: dark;
+            color-scheme: dark light;
           }
 
           body {
             background: var(--dark);
             color: var(--light);
             text-rendering: optimizeLegibility;
+          }
+
+          @media (prefers-color-scheme: light) {
+            body {
+              background: var(--light);
+              color: var(--dark);
+            }
           }
         </style>
       </head>

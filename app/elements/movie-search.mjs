@@ -8,6 +8,12 @@ export default function MovieSearch ({ html, state }) {
         max-width: 8rem;
       }
 
+      @media (prefers-color-scheme: light) {
+        input {
+          background: var(--light);
+        }
+      }
+
       input:focus {
         outline: 2px solid var(--pink-200);
         outline-offset: 2px;

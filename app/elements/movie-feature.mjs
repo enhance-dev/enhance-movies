@@ -23,6 +23,12 @@ export default function MovieFeature({ html, state }) {
         opacity: 0.333;
       }
 
+      @media (prefers-color-scheme: light) {
+        .backdrop {
+          opacity: 0.2;
+        }
+      }
+
       p {
         max-width: 52ch;
       }

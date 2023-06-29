@@ -34,6 +34,12 @@ export default function MovieSummaryWrapper ({ html, state }) {
         animation-fill-mode: backwards;
       }
 
+      @media (prefers-color-scheme: light) {
+        .fadeout {
+          background-image: linear-gradient(to bottom, transparent, var(--light)), linear-gradient(to right, var(--light), transparent);
+        }
+      }
+
       @media only screen and (min-width: 48em) {
         section {
           display: grid;

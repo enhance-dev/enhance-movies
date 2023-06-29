@@ -52,6 +52,10 @@ export default function MovieHeader ({ html }) {
     }
   }
 
+  h1 {
+    color: var(--light);
+  }
+
   img {
     width: 2rem;
     aspect-ratio: 136 / 124;
