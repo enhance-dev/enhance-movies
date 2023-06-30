@@ -3,7 +3,7 @@
   "short_name": "Enhance Movie",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
+  "display": "minimal-ui",
   "theme_color": "#a0094a",
   "background_color": "#15171b",
   "description": "Enhance Movie is a non-trivial demo application built on top of the TMDB (The Movie Database) API.",
