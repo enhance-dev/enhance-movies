@@ -3,7 +3,6 @@ const triggers = document.querySelectorAll('movie-trailer-modal a')
 
 triggers.forEach(trigger => {
   trigger.addEventListener('click', event => {
-    console.log('CLICKED')
     // Prevent link firing so we can open the trailer's modal instead
     event.preventDefault()
     const movieID = trigger.parentElement.dataset.movie
