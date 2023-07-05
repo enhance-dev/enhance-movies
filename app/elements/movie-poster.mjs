@@ -38,12 +38,17 @@ export default function MoviePoster ({ html, state }) {
       a:focus .image-wrapper:after {
         opacity: 1;
       }
+
+      img {
+        aspect-ratio: 2 / 3;
+      }
     </style>
     <a href="/movie?id=${id}&page=1" class="relative flex flex-col">
       <div class="relative image-wrapper">
         <img
           src="${poster_path === 'null' ? '/_public/generic-movie.jpg' : `https://image.tmdb.org/t/p/w342${poster_path}`}"
           alt="${title}"
+          class="si-100 object-cover"
         />
       </div>
       <h2 class="mbs0 mbe-6">${title}</h2>
