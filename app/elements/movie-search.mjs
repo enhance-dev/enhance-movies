@@ -4,24 +4,25 @@ export default function MovieSearch ({ html, state }) {
   return html`
     <style>
       :host {
+        /* Custom properties for movie-dialog */
         --aspect-ratio: none;
         --margin-block: var(--space-2);
       }
 
-      #server-search-input:focus {
-        outline: 2px solid var(--pink-200);
-        outline-offset: 2px;
-      }
-
       #server-search-input {
         background: var(--dark);
-        max-width: 8rem;
+        max-width: 6rem;
       }
 
       @media screen and (min-width: 48em) {
         #server-search-input {
           max-width: none;
         }
+      }
+
+      #server-search-input:focus {
+        outline: 2px solid var(--pink-200);
+        outline-offset: 2px;
       }
 
       [slot='content'] {
@@ -71,9 +72,7 @@ export default function MovieSearch ({ html, state }) {
 
       <movie-dialog id='client-search-dialog'>
         <div slot='content'>
-          <form>
-            <input id='client-search-input' name='title' type='search' class='text1 border-be2' placeholder='Enter a title to search for' />
-          </form>
+          <input id='client-search-input' name='title' type='search' class='text1 border-be2' placeholder='Enter a title to search for' />
 
           <h2 id='client-search-results-title' class='mb0 text2 font-medium'></h2>
           <movie-grid-client id='client-search-results'></movie-grid-client>
