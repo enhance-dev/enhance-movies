@@ -1,5 +1,5 @@
 import enhance from '@enhance/element'
-import MovieGridClient from '../lib/movie-grid-style.mjs'
+import MovieGridClient from '../elements/movie-grid-client.mjs'
 
 enhance('movie-grid-client', {
   render: MovieGridClient,
