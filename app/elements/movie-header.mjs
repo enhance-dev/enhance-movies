@@ -3,6 +3,7 @@ export default function MovieHeader ({ html }) {
 <style>
   :host {
     display: block;
+    color: var(--light);
     background-color: var(--pink-700);
     box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
     padding-inline: var(--space-0);
@@ -52,11 +53,7 @@ export default function MovieHeader ({ html }) {
     }
   }
 
-  h1 {
-    color: var(--light);
-  }
-
-  img {
+  .logo {
     width: 2rem;
     aspect-ratio: 136 / 124;
     inset-block-start: -0.25rem;
@@ -83,7 +80,7 @@ export default function MovieHeader ({ html }) {
       </label>
       <a href='/'>
         <h1 class='font-semibold flex gap-2 align-items-center'>
-          <img class='hidden inline-block-lg relative' src='/_public/favicon.svg' alt='' />
+          <img class='logo hidden inline-block-lg relative' src='/_public/favicon.svg' alt='' />
           Enhance Movies
         </h1>
       </a>

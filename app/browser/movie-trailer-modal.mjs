@@ -6,11 +6,11 @@ triggers.forEach(trigger => {
     // Prevent link firing so we can open the trailer's modal instead
     event.preventDefault()
     const movieID = trigger.parentElement.dataset.movie
-    document.querySelector(`dialog[data-movie='${movieID}']`).showModal()
+    document.querySelector(`movie-dialog[data-movie='${movieID}'] dialog`).showModal()
   })
 })
 
-const dialogs = document.querySelectorAll('dialog')
+const dialogs = document.querySelectorAll('movie-trailer-modal dialog')
 
 dialogs.forEach(dialog => {
   dialog.addEventListener('click', event => {
