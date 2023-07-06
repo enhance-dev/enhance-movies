@@ -2,9 +2,9 @@ export default function MovieFooter ({ html }) {
   return html`
     <style>
       img {
-        width: 2rem;
-        aspect-ratio: 136 / 124;
-        inset-block-start: -0.125rem;
+        width: 2.5rem;
+        aspect-ratio: 52 / 51;
+        inset-block-start: -0.25rem;
       }
 
       a {
@@ -21,7 +21,7 @@ export default function MovieFooter ({ html }) {
     </style>
     <footer class='pb4 pi0 mbe4 leading3'>
       <h1 class='text2 text-center font-semibold flex justify-content-center align-items-center gap-2 mbe4'>
-        <img src='/_public/favicon.svg' alt='' class='relative' />
+        <img src='/_public/axol.svg' alt='' class='relative' />
         Enhance Movies
       </h1>
 
