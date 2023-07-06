@@ -33,7 +33,13 @@
     "white": "#fff"
   },
   "properties": {
-    "easeOutQuint": "cubic-bezier(0.23,1,0.32,1)"
+    "easeOutQuint": "cubic-bezier(0.23,1,0.32,1)",
+    "dialogBackgroundLight": "hsla(0deg 0% 90% / 0.5)",
+    "dialogBackgroundDark": "hsla(0deg 0% 10% / 0.5)",
+    "featureBackdropOpacityLight": 0.125,
+    "featureBackdropOpacityDark": 0.333,
+    "movieBackdropFilterLight": "blur(6px) brightness(120%) contrast(66%)",
+    "movieBackdropFilterDark": "blur(2px) brightness(80%)"
   },
   "grid": {
     "steps": 6

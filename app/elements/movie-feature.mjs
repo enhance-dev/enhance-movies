@@ -20,13 +20,7 @@ export default function MovieFeature({ html, state }) {
         background-size: cover;
         background-repeat: no-repeat;
         filter: blur(2px);
-        opacity: 0.333;
-      }
-
-      @media (prefers-color-scheme: light) {
-        .backdrop {
-          opacity: 0.125;
-        }
+        opacity: var(--featureBackdropOpacity);
       }
 
       p {

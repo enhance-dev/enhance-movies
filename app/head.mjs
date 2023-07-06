@@ -36,20 +36,29 @@ export default function Head () {
         <script async type="module" src="/_public/browser/sw.mjs"></script>
         <style>
           :root {
+            --background: var(--light);
+            --color: var(--dark);
+            --dialogBackground: var(--dialogBackgroundLight);
+            --featureBackdropOpacity: var(--featureBackdropOpacityLight);
+            --movieBackdropFilter: var(--movieBackdropFilterLight);
             color-scheme: dark light;
           }
 
-          body {
-            background: var(--dark);
-            color: var(--light);
-            text-rendering: optimizeLegibility;
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --background: var(--dark);
+              --color: var(--light);
+              --dialogBackground: var(--dialogBackgroundDark);
+              --featureBackdropOpacity: var(--featureBackdropOpacityDark);
+              --movieBackdropFilter: var(--movieBackdropFilterDark);
+            }
           }
 
-          @media (prefers-color-scheme: light) {
-            body {
-              background: var(--light);
-              color: var(--dark);
-            }
+          body {
+            background: var(--background);
+            color: var(--color);
+            text-rendering: optimizeLegibility;
+            transition: background 1s var(--easeOutQuint), color 1s var(--easeOutQuint);
           }
         </style>
       </head>

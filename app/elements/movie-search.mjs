@@ -7,11 +7,13 @@ export default function MovieSearch ({ html, state }) {
         /* Custom properties for movie-dialog */
         --aspect-ratio: none;
         --margin-block: var(--space-2);
+
+        --movieButtonOutline: var(--pink-200);
       }
 
       #server-search-input {
-        background: var(--dark);
-        max-width: 6rem;
+        background: var(--background);
+        max-width: 8rem;
       }
 
       @media screen and (min-width: 48em) {
@@ -26,8 +28,8 @@ export default function MovieSearch ({ html, state }) {
       }
 
       [slot='content'] {
-        background: var(--dark);
-        color: var(--light);
+        background: var(--background);
+        color: var(--color);
         padding: var(--space-0);
         max-block-size: inherit;
         overflow-y: scroll;
@@ -46,18 +48,6 @@ export default function MovieSearch ({ html, state }) {
       #client-search-input:focus {
         outline: none;
         border-color: var(--pink-500);
-      }
-
-      @media (prefers-color-scheme: light) {
-        #server-search-input {
-          background: var(--light);
-        }
-
-        [slot='content'] {
-          background: var(--light);
-          color: var(--dark);
-        }
-
       }
     </style>
 

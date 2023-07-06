@@ -78,7 +78,7 @@ export default function MovieHeader ({ html }) {
             <use xlink:href="#svg-hamburger">
           </svg>
       </label>
-      <a href='/'>
+      <a href='/' class='hidden block-lg'>
         <h1 class='font-semibold flex gap-2 align-items-center'>
           <img class='logo hidden inline-block-lg relative' src='/_public/favicon.svg' alt='' />
           Enhance Movies
@@ -87,6 +87,7 @@ export default function MovieHeader ({ html }) {
       <movie-sidebar id="mobile-nav" class="fixed z-1"></movie-sidebar>
     </nav>
     <div class="flex align-items-center">
+      <color-scheme></color-scheme>
       <movie-search></movie-search>
     </div>
   </div>

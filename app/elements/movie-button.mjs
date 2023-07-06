@@ -8,7 +8,7 @@ export default function MovieButton ({ html }) {
 
       button:hover,
       button:focus {
-        outline: 2px solid var(--pink-400);
+        outline: 2px solid var(--movieButtonOutline, --pink-400);
         outline-offset: 2px;
       }
     </style>

@@ -18,15 +18,8 @@ export default function MovieDialog({ html, state }) {
       }
 
       dialog::backdrop {
-        background-color: hsla(0deg 0% 10% / 0.5);
-        backdrop-filter: blur(5px) contrast(0.33);
-      }
-
-      @media (prefers-color-scheme: light) {
-        dialog::backdrop {
-          background-color: hsla(0deg 0% 90% / 0.5);
-          backdrop-filter: blur(5px) contrast(0.5);
-        }
+        background-color: var(--dialogBackground);
+        backdrop-filter: blur(5px) contrast(0.5);
       }
 
       .close-button {
