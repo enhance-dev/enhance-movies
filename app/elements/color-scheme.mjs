@@ -10,7 +10,6 @@ export default function ColorScheme({ html }) {
 
       /* preserve input focus detection but hide visually */
       input {
-        inset-block-start: -100vw;
         inset-inline-start: -100vw;
       }
 
