@@ -89,7 +89,6 @@ export default function ColorScheme({ html }) {
         }
 
         connectedCallback() {
-          console.log(this.form.elements)
           this.form.classList.remove('hidden')
           this.form.classList.add('flex')
           const colorscheme = window.matchMedia('(prefers-color-scheme: dark)')
