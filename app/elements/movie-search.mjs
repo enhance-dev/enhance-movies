@@ -72,5 +72,6 @@ export default function MovieSearch ({ html, state }) {
 
     <script type='module' src='/_public/browser/movie-search.mjs'></script>
     <script type='module' src='/_public/browser/movie-poster.mjs'></script>
+    <script type='module' src='/_public/browser/star-rating.mjs'></script>
   `
 }
