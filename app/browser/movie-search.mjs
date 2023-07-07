@@ -1,10 +1,10 @@
 /* globals HTMLElement customElements */
 import enhance from '@enhance/element'
-import MoviePoster from '../elements/movie-poster.mjs'
+import { MoviePosterHTML } from '../elements/movie-poster.mjs'
 import StarRating from '../elements/star-rating.mjs'
 
 enhance('movie-poster', {
-  render: MoviePoster,
+  render: MoviePosterHTML,
 })
 
 enhance('star-rating', {
