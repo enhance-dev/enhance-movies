@@ -9,7 +9,6 @@ export default function StarRating ({ html, state }) {
         position: relative;
       }
     </style>
-    
     <svg
       width="84"
       height="17"

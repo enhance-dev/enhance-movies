@@ -1,7 +1,4 @@
-export default function MovieDialog({ html, state }) {
-  const { attrs } = state
-  const { aspect_ratio = '16 / 9' } = attrs
-
+export default function MovieDialog({ html }) {
   return html`
     <style>
       dialog {
@@ -9,7 +6,7 @@ export default function MovieDialog({ html, state }) {
         padding: var(--space-0);
         inline-size: 85vw;
         max-block-size: 80vh;
-        aspect-ratio: var(--aspect-ratio, ${aspect_ratio});
+        aspect-ratio: var(--aspect-ratio, 16 / 9);
         margin-block: var(--margin-block, auto);
       }
 

@@ -4,12 +4,8 @@ export default function MovieTrailerModal({ html, state }) {
 
   return html`
     <style>
-      :host {
-        --aspect-ratio: 16 / 9;
-      }
-
       iframe {
-        aspect-ratio: var(--aspect-ratio);
+        aspect-ratio: 16 / 9;
       }
     </style>
     <movie-dialog data-movie="${movie_id}">

@@ -26,7 +26,7 @@ class MovieSearch extends HTMLElement {
     this.resultsContainer = this.querySelector('#client-search-results')
   }
 
-  // Add event listeners, hide the server rendered UI, show the client UI
+  // When the custom element connects, add event listeners, hide the server rendered UI, and show the client UI
   connectedCallback() {
     this.searchTrigger.addEventListener('click', () => this.searchDialog.showModal())
     this.searchDialog.addEventListener('open', () => this.searchDialogInput.focus())
@@ -35,16 +35,17 @@ class MovieSearch extends HTMLElement {
     this.clientSearch.classList.remove('hidden')
   }
 
+  // Fires every time a user modifies or clears the search input
   onInput(value) {
     // Value was cleared, either by ESC, input's builtin clear button, or manually
     if (value === '') {
       return this.resetResults()
     }
 
-    // Set the query as a class property so other methods can have easy access
+    // Set the query as a class property so other methods can have easy access to it
     this.query = value
 
-    // Handled outside renderResults so as to avoid the preceding debounce
+    // Update the results title separately from updating renderResults so as to avoid the latter’s debounce
     this.resultsTitleElement.textContent = `Results for ‘${value}’`
 
     // If a call to our timeout fn is already queued, clear the timeout and start a fresh one

@@ -1,13 +1,13 @@
 export default function MoviePoster ({ html, state }) {
   const { attrs } = state
   let { id, poster_path, title, vote_average } = attrs
-  let percent
+  let percentRemainder
 
   if (vote_average === '0') {
     vote_average = 'Not yet rated'
   } else {
     vote_average = Number(vote_average).toFixed(1)
-    percent = 100 - ((vote_average / 10) * 100)
+    percentRemainder = 100 - ((Number(vote_average) / 10) * 100) // Calculate remaining % out of 100 for star rating inset
   }
 
   return html`
@@ -55,7 +55,7 @@ export default function MoviePoster ({ html, state }) {
       </div>
       <h2 class="mbs0 mbe-6">${title}</h2>
       <p class="flex gap-4 align-items-center text-1">
-        ${percent ? `<star-rating inset="${percent}"></star-rating>` : ''}
+        ${percentRemainder ? `<star-rating inset="${percentRemainder}"></star-rating>` : ''}
         ${vote_average}
       </p>
     </a>`

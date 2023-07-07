@@ -2,7 +2,7 @@ export default function MovieFooter ({ html }) {
   return html`
     <style>
       img {
-        width: 2.5rem;
+        inline-size: 2.5rem;
         aspect-ratio: 52 / 51;
         inset-block-start: -0.25rem;
       }

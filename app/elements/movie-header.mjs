@@ -7,7 +7,6 @@ export default function MovieHeader ({ html }) {
     background-color: var(--pink-700);
     box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
     padding-inline: var(--space-0);
-    height: var(--nav-bar-height);
     position: sticky;
     inset-block-start: 0;
     z-index: 2;
@@ -15,7 +14,7 @@ export default function MovieHeader ({ html }) {
   }
 
   .navBarHeight {
-    height: var(--nav-bar-height);
+    block-size: var(--nav-bar-height);
   }
 
   #mobile-nav {
@@ -24,9 +23,8 @@ export default function MovieHeader ({ html }) {
     inset-block-end: 0;
     inset-inline-start: -100vw;
     overflow-y: scroll;
-    width: 100vw;
-    -webkit-transition: left 0.2s ease;
-    transition: left 0.2s ease;
+    inline-size: 100vw;
+    transition: inset-inline-start 0.2s ease;
   }
 
   #burger-control {
@@ -42,19 +40,18 @@ export default function MovieHeader ({ html }) {
   }
 
   @media only screen and (min-width: 48em) {
-    #hamburger,
-    #mobile-nav {
-      display: none !important; /* even when :checked */
-    }
-
     #mobile-nav {
       -webkit-transition: initial;
       transition: initial;
     }
+
+    #burger-control:checked ~ #mobile-nav {
+      display: none;
+    }
   }
 
   .logo {
-    width: 2rem;
+    inline-size: 2rem;
     aspect-ratio: 136 / 124;
     inset-block-start: -0.25rem;
   }
@@ -70,8 +67,7 @@ export default function MovieHeader ({ html }) {
         autocomplete="off"
         aria-label="Open navigation" />
       <label
-          id="hamburger"
-          class="cursor-pointer relative pie0"
+          class="cursor-pointer relative pie0 hidden-lg"
           for="burger-control"
           title="Open navigation">
           <svg height="24" width="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -84,7 +80,7 @@ export default function MovieHeader ({ html }) {
           Enhance Movies
         </h1>
       </a>
-      <movie-sidebar id="mobile-nav" class="fixed z-1"></movie-sidebar>
+      <movie-sidebar id="mobile-nav" class="fixed z-1 hidden-lg"></movie-sidebar>
     </nav>
     <div class="flex align-items-center">
       <color-scheme></color-scheme>

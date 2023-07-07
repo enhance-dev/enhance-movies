@@ -1,6 +1,7 @@
 export default function ColorScheme({ html }) {
   return html`
     <style>
+      /* Colorscheme option default state */
       :is(icon-sun, icon-moon) svg {
         fill: transparent;
         transition: fill 0.25s var(--easeOutQuint), scale 0.25s var(--easeOutQuint);
@@ -8,7 +9,7 @@ export default function ColorScheme({ html }) {
         border-radius: 100%;
       }
 
-      /* preserve input focus detection but hide visually */
+      /* Preserve input focus detection but hide visually */
       input {
         inset-inline-start: -100vw;
       }
@@ -17,6 +18,7 @@ export default function ColorScheme({ html }) {
         outline: 2px solid white;
       }
 
+      /* Colorscheme option active state */
       input:checked + :is(icon-sun, icon-moon) svg {
         fill: white;
         scale: 1;
@@ -61,8 +63,11 @@ export default function ColorScheme({ html }) {
         }
 
         updatePreference(mode) {
+          // Update the stored preference for the colorscheme
           localStorage.setItem('colorscheme', mode)
+          // Update local reference to the preference
           this.preference = mode
+          // Update the radio inputs
           this.form.elements.colorscheme.value = mode
         }
 
@@ -89,11 +94,14 @@ export default function ColorScheme({ html }) {
         }
 
         connectedCallback() {
+          // Reveal colorscheme toggles
           this.form.classList.remove('hidden')
           this.form.classList.add('flex')
+
+          // Check the user’s OS colorscheme
           const colorscheme = window.matchMedia('(prefers-color-scheme: dark)')
           const prefersDark = this.preference !== null
-            ? this.preference === 'dark' // prefer user's preference if one has been given
+            ? this.preference === 'dark' // prefer user's stored preference if one has been given
             : colorscheme.matches // fall back to user's OS colorscheme as the initial preference
 
           // Set initial colorscheme
@@ -101,7 +109,7 @@ export default function ColorScheme({ html }) {
             ? this.setDarkStyles()
             : this.setLightStyles()
 
-          // Listen for changes on the toggle
+          // Listen for changes on the colorscheme toggles
           this.form.addEventListener('change', e => {
             this.handleChange(e.target.value === 'dark')
           })

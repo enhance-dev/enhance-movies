@@ -29,6 +29,12 @@ export default function MovieSummaryWrapper ({ html, state }) {
         animation-fill-mode: backwards;
       }
 
+      /* This element contains the movie's poster image as a background image (if one is available).
+       * We then compose 2 linear gradients to fade that image from full opacity on the top and right axes
+       * to full transparency on the bottom and left axes, in order to fade the background image into the
+       * application background.
+       * We also apply some filters to soften the background image in order to ensure text will remain
+       * legible when set on top of it. */
       .backdrop {
         --mask-image: linear-gradient(to bottom, black, transparent), linear-gradient(to right, transparent, black);
         mask-image: var(--mask-image);
@@ -38,7 +44,7 @@ export default function MovieSummaryWrapper ({ html, state }) {
         -webkit-mask-composite: source-in;
         background-image: url("https://image.tmdb.org/t/p/w1280/${backdrop_path}");
         background-size: cover;
-        inset: -2.5%; /* blur filter can cause background edges to show at top and right; this hides that */
+        inset: -2.5%; /* Blur filter can cause background edges to show at top and right; this hides that */
         filter: var(--movieBackdropFilter);
         animation: 1s filterIn var(--easeOutQuint);
         animation-delay: 0.5s;

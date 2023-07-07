@@ -8,6 +8,7 @@ export default function MovieSearch ({ html, state }) {
         --aspect-ratio: none;
         --margin-block: var(--space-2);
 
+        /* Custom property for movie-button */
         --movieButtonOutline: var(--pink-200);
       }
 
@@ -31,10 +32,11 @@ export default function MovieSearch ({ html, state }) {
         background: var(--background);
         color: var(--color);
         padding: var(--space-0);
-        max-block-size: inherit;
+        max-block-size: inherit; /* Ensure content doesn't grow taller than dialog's max height */
         overflow-y: scroll;
       }
 
+      /* Prevent rendering negative spaces when no search term has been entered */
       [slot='content'] :is(h2, movie-grid-client):empty {
         display: none;
       }

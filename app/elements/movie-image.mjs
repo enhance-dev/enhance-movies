@@ -3,15 +3,14 @@ export default function MovieImage ({ html, state }) {
   const { src, alt } = attrs
   return html`
     <style>
-      .aspect-ratio-box {
+      img {
           aspect-ratio: 2 / 3;
       }
     </style>
-    <div class="aspect-ratio-box overflow-hidden">
-      <img
-        src="${src}"
-        class="object-cover"
-        alt="${alt}"
-      />
-    </div>`
+    <img
+      src="${src}"
+      class="object-cover"
+      alt="${alt}"
+    />
+  `
 }

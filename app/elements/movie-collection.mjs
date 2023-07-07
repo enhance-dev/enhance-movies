@@ -5,7 +5,7 @@ export default function MovieCollection ({ html, state }) {
   return html`
     <style>
       layout-collection {
-        margin-inline: calc(var(--space-0) * -1);
+        margin-inline: calc(var(--space-0) * -1); /* Create negative margins equivalent to scroll padding to maintain visual aligment */
         scroll-padding: var(--space-0);
         container-type: inline-size;
         animation: 2s fadein var(--easeOutQuint), 1s slide var(--easeOutQuint);
