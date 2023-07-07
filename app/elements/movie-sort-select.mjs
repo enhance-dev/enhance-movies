@@ -4,6 +4,7 @@ export default function MovieSortSelect ({ html, state }) {
   return html`
     <style>
       select {
+        background: transparent;
         border: 2px solid var(--color);
         outline-offset: 2px;
       }
