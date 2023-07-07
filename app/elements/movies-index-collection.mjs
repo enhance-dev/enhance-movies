@@ -3,10 +3,10 @@ export default function MovieCollection ({ html, state }) {
 
   const renderPoster = (({ id, poster_path, title, vote_average }) => `
     <movie-poster
-      id="${id}"
-      poster_path="${poster_path}"
-      title="${title}"
-      vote_average="${vote_average}"
+      id='${id}'
+      poster_path='${poster_path}'
+      title='${title}'
+      vote_average='${vote_average}'
     ></movie-poster>
   `)
 
@@ -30,7 +30,7 @@ export default function MovieCollection ({ html, state }) {
       }
     </style>
 
-    <h1 class="text2 font-medium">Popular</h1>
+    <h1 class='text2 font-medium'>Popular</h1>
     <layout-collection
       class='p0 mbe0'
       gap='var(--space-0)'
@@ -40,7 +40,7 @@ export default function MovieCollection ({ html, state }) {
       ${popular}
     </layout-collection>
 
-    <h1 class="text2 font-medium">Top rated</h1>
+    <h1 class='text2 font-medium'>Top rated</h1>
     <layout-collection
       class='p0 mbe0'
       gap='var(--space-0)'
@@ -50,7 +50,7 @@ export default function MovieCollection ({ html, state }) {
       ${topRated}
     </layout-collection>
 
-    <h1 class="text2 font-medium">Upcoming</h1>
+    <h1 class='text2 font-medium'>Upcoming</h1>
     <layout-collection
       class='p0'
       gap='var(--space-0)'
