@@ -14,7 +14,7 @@ export default function MovieHeader ({ html }) {
     --nav-bar-height: 4rem;
   }
 
-  nav {
+  .navBarHeight {
     height: var(--nav-bar-height);
   }
 
@@ -61,7 +61,7 @@ export default function MovieHeader ({ html }) {
 </style>
 <header>
   <div class="flex align-items-center justify-content-between">
-    <nav class="flex align-items-center">
+    <nav class="navBarHeight flex align-items-center">
       <input
         id="burger-control"
         class="absolute opacity-0 z-1"

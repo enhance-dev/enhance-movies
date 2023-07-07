@@ -28,7 +28,7 @@ export default function MovieSidebar ({ html, state }) {
           background: linear-gradient(to right, var(--pink-600), transparent);
         }
     </style>
-    <div class="p0 flex">
+    <div class="p0 mbe0 flex">
         <nav>
             <h2 class="font-bold">Discover</h2>
             <ul class="list-none mbe0">
