@@ -1,5 +1,6 @@
 /* globals HTMLElement customElements */
 import enhance from '@enhance/element'
+import formatTitle from '../lib/formatTitle.mjs'
 import MoviePoster from '../elements/movie-poster.mjs'
 import StarRating from '../elements/star-rating.mjs'
 
@@ -82,7 +83,7 @@ class MovieSearch extends HTMLElement {
 
   renderResults() {
     this.resultsContainer.innerHTML = this.results.map(movie => `
-      <movie-poster id='${movie.id}' poster_path='${movie.poster_path}' title='${movie.title}' vote_average='${movie.vote_average}'></movie-poster>
+      <movie-poster id='${movie.id}' poster_path='${movie.poster_path}' title='${formatTitle(movie.title)}' vote_average='${movie.vote_average}'></movie-poster>
     `).join('')
   }
 
