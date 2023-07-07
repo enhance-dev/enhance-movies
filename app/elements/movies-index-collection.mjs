@@ -1,3 +1,5 @@
+import formatTitle from '../lib/formatTitle.mjs'
+
 export default function MovieCollection ({ html, state }) {
   const { store } = state
 
@@ -5,7 +7,7 @@ export default function MovieCollection ({ html, state }) {
     <movie-poster
       id='${id}'
       poster_path='${poster_path}'
-      title='${title}'
+      title='${formatTitle(title)}'
       vote_average='${vote_average}'
     ></movie-poster>
   `)
