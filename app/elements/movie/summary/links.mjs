@@ -2,6 +2,7 @@ export default function MovieSummaryLinks ({ html, state }) {
   const { store } = state
   const { movie = {} } = store
   const { homepage, imdb_id, trailer, id } = movie
+  const embeddedTrailerUrl = trailer?.key && `https://www.youtube.com/embed/${trailer.key}?rel=0&autoplay=0&showinfo=0`
   const trailerUrl = `https://www.youtube.com/embed/${trailer?.key}?rel=0&autoplay=0&showinfo=0`
 
   return html`
@@ -18,7 +19,7 @@ export default function MovieSummaryLinks ({ html, state }) {
               <use xlink:href="#svg-imdb">
             </svg>
         </secondary-link-button>`}
-        ${trailer?.key ? `<movie-trailer-modal href="${trailerUrl}" id=${id}"></movie-trailer-modal>` : ''}
+        ${trailer?.key ? `<movie-trailer-modal embedded="${embeddedTrailerUrl}" trailer="${trailerUrl}" id=${id}"></movie-trailer-modal>` : ''}
     </div>
   `
 }
