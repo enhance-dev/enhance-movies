@@ -15,7 +15,7 @@ export default function MovieFooter ({ html }) {
 
       dl {
         grid-template-columns: 1fr 1fr;
-        gap: 0 1em;
+        gap: 0.5em 1em;
       }
 
     </style>
