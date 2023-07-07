@@ -23,12 +23,12 @@ export default function ColorScheme({ html }) {
       }
     </style>
     <form class='gap-4-lg mie-6 mie0-lg hidden'>
-      <label title="Light Theme" for="lighttheme" class='cursor-pointer'>
-        <input type='radio' name='colorscheme' value='light' class='absolute' id="lighttheme" />
+      <label aria-label="Light theme" class='cursor-pointer'>
+        <input type='radio' name='colorscheme' value='light' class='absolute' />
         <icon-sun></icon-sun>
       </label>
-      <label title="Dark Theme" for="darktheme" class='cursor-pointer'>
-        <input type='radio' name='colorscheme' value='dark' class='absolute' id="darktheme" />
+      <label aria-label="Dark theme" class='cursor-pointer'>
+        <input type='radio' name='colorscheme' value='dark' class='absolute' />
         <icon-moon></icon-moon>
       </label>
     </form>

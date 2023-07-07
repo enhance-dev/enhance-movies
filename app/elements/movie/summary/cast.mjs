@@ -28,7 +28,7 @@ export default function MovieSummaryCast ({ html, state }) {
           display: none;
         }
       </style>
-      <typography-h3>Cast</typography-h3>
+      <h2 class='text-1 font-bold mb-2 uppercase tracking1'>Cast</h2>
         <div class="flex pb-4 gap0 cast-container overflow-x-scroll">
             ${cast.map(actor => `<a href="/person?id=${actor.id}&page=1" class="block flex-shrink-0 overflow-hidden">
               <img alt="${actor.name}" src="${actor.profile_path ? `https://image.tmdb.org/t/p/w185${actor.profile_path}` : '/_public/generic-avatar.jpg'}" title="${actor.name}"class="object-cover" />

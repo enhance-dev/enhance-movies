@@ -9,7 +9,7 @@ export default function MovieSummarySynopsis ({ html, state }) {
             margin-block-end: var(--space-2);
         }
       </style>
-      <typography-h3>Synopsis</typography-h3>
+      <h2 class='text-1 font-bold mb-2 uppercase tracking1'>Synopsis</h2>
       <p class="leading4">${overview}</p>
     `
 }

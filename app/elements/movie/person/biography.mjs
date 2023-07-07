@@ -9,7 +9,7 @@ export default function MoviePersonBiography ({ html, state }) {
               margin-block-end: var(--space-2);
           }
         </style>
-        <typography-h3>Biography</typography-h3>
+        <h2 class='text-1 font-bold mb-2 uppercase tracking1'>Biography</h2>
         <p class="leading4">${biography}</p>
       `
 }
