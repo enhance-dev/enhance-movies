@@ -43,7 +43,7 @@ export default function MovieFeature({ html, state }) {
             View Details
           </primary-link-button>
           ${trailer ? `
-            <movie-trailer-modal embedded="${embeddedTrailerUrl}" trailer="${trailerUrl}" id="${id}"></movie-trailer-modal>
+            <movie-trailer-modal embedded="${embeddedTrailerUrl}" trailer="${trailerUrl}" movie_id="${id}"></movie-trailer-modal>
           ` : ''}
         </div>
       </div>

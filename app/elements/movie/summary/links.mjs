@@ -19,7 +19,7 @@ export default function MovieSummaryLinks ({ html, state }) {
               <use xlink:href="#svg-imdb">
             </svg>
         </secondary-link-button>`}
-        ${trailer?.key ? `<movie-trailer-modal embedded="${embeddedTrailerUrl}" trailer="${trailerUrl}" id=${id}"></movie-trailer-modal>` : ''}
+        ${trailer?.key ? `<movie-trailer-modal embedded="${embeddedTrailerUrl}" trailer="${trailerUrl}" movie_id=${id}"></movie-trailer-modal>` : ''}
     </div>
   `
 }
