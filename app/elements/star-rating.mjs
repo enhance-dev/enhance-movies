@@ -1,14 +1,18 @@
-export default function StarRating ({ html, state }) {
+export function StarRatingStyles() {
+  return `<style>
+  :host {
+    display: block;
+    position: relative;
+  }
+</style>
+`
+}
+
+export function StarRatingHTML ({ html, state }) {
   const { attrs } = state
   const { inset } = attrs
 
   return html`
-    <style>
-      :host {
-        display: block;
-        position: relative;
-      }
-    </style>
     <svg
       width="84"
       height="17"
@@ -39,4 +43,11 @@ export default function StarRating ({ html, state }) {
       <path d="M76.4755 3.84549L76 2.38197L75.5245 3.84549L74.5142 6.95492H71.2447H69.7059L70.9508 7.85942L73.5959 9.78115L72.5855 12.8906L72.11 14.3541L73.355 13.4496L76 11.5279L78.645 13.4496L79.89 14.3541L79.4145 12.8906L78.4041 9.78115L81.0492 7.85942L82.2941 6.95492H80.7553H77.4858L76.4755 3.84549Z" fill="#D00B61" stroke="#D00B61"/>
     </svg>
   `
+}
+
+export default function StarRating ({ html, state }) {
+  return html`
+    ${StarRatingStyles()}
+    ${StarRatingHTML({ html, state })}
+`
 }
