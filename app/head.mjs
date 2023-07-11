@@ -62,6 +62,6 @@ export default function Head () {
           }
         </style>
       </head>
-      <body class='font-sans leading3'>
+      <body class='font-sans leading3 overflow-x-hidden'>
 `
 }
