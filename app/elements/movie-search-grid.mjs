@@ -7,5 +7,5 @@ export default function MovieSearchGrid({ html }) {
         grid-gap: var(--space-2) var(--space-0);
         margin-block: var(--space-2);
       }
-    </style><slot></slot>`
+    </style>`
 }
