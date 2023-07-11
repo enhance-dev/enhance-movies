@@ -5,7 +5,7 @@ import { StarRatingHTML } from '../elements/star-rating.mjs'
 
 function attributesToObject(node) {
   let attrs = {}
-  let args = [...node.arguements]
+  let args = [...node.arguments]
   args.forEach((attribute) => {
     attrs[attribute] = node.arguments[attribute]
   })
