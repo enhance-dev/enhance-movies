@@ -1,6 +1,6 @@
 import enhance from '@enhance/element'
-import MovieGridClient from '../elements/movie-grid-client.mjs'
+import MovieSearchGrid from '../elements/movie-search-grid.mjs'
 
 enhance('movie-grid-client', {
-  render: MovieGridClient,
+  render: MovieSearchGrid,
 })
