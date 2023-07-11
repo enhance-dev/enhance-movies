@@ -36,9 +36,7 @@ export function MoviePosterStyles() {
 `
 }
 
-export function MoviePosterHTML({ html, state }) {
-  const { attrs } = state
-  let { id, poster_path, title, vote_average } = attrs
+export function MoviePosterHTML({ id, poster_path, title, vote_average }) {
   let percentRemainder
 
   if (vote_average === '0') {
@@ -48,7 +46,7 @@ export function MoviePosterHTML({ html, state }) {
     percentRemainder = 100 - ((Number(vote_average) / 10) * 100) // Calculate remaining % out of 100 for star rating inset
   }
 
-  return html`
+  return `
     <a href="/movie?id=${id}&page=1" class="relative flex flex-col">
       <div class="relative image-wrapper">
         <img
@@ -66,8 +64,9 @@ export function MoviePosterHTML({ html, state }) {
 }
 
 export default function MoviePoster ({ html, state }) {
+  const { attrs } = state
   return html`
     ${MoviePosterStyles()}
-    ${MoviePosterHTML({ html, state })}
+    ${MoviePosterHTML(attrs)}
 `
 }

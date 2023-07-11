@@ -1,16 +1,40 @@
 /* globals HTMLElement customElements */
-import enhance from '@enhance/element'
 import formatTitle from '../lib/formatTitle.mjs'
 import { MoviePosterHTML } from '../elements/movie-poster.mjs'
 import { StarRatingHTML } from '../elements/star-rating.mjs'
 
-enhance('movie-poster', {
-  render: MoviePosterHTML,
-})
+function attributesToObject(node) {
+  let attrs = {}
+  let args = [...node.arguements]
+  args.forEach((attribute) => {
+    attrs[attribute] = node.arguments[attribute]
+  })
+  return attrs
+}
 
-enhance('star-rating', {
-  render: StarRatingHTML,
-})
+class MoviePoster extends HTMLElement {
+  constructor() {
+    super()
+    this.render = MoviePosterHTML
+  }
+  connectedCallback() {
+    this.innerHTML = this.render(attributesToObject(this))
+  }
+}
+
+customElements.define('movie-poster', MoviePoster)
+
+class StarRating extends HTMLElement {
+  constructor() {
+    super()
+    this.render = StarRatingHTML
+  }
+  connectedCallback() {
+    this.innerHTML = this.render(attributesToObject(this))
+  }
+}
+
+customElements.define('star-rating', StarRating)
 
 class MovieSearch extends HTMLElement {
   constructor() {
