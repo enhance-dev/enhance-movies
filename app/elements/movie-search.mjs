@@ -37,7 +37,7 @@ export default function MovieSearch ({ html, state }) {
       }
 
       /* Prevent rendering negative spaces when no search term has been entered */
-      [slot='content'] :is(h2, movie-grid-client):empty {
+      [slot='content'] :is(h2, movie-search-grid):empty {
         display: none;
       }
 
@@ -67,7 +67,7 @@ export default function MovieSearch ({ html, state }) {
           <input id='client-search-input' name='title' type='search' class='text1 border-be2' placeholder='Enter a title to search for' />
 
           <h2 id='client-search-results-title' class='mb0 text2 font-medium'></h2>
-          <movie-grid-client id='client-search-results'></movie-grid-client>
+          <movie-search-grid id='client-search-results'></movie-search-grid>
         </div>
       </movie-dialog>
     </section>
