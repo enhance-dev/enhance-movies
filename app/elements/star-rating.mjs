@@ -8,8 +8,11 @@ export function StarRatingStyles() {
 `
 }
 
-export function StarRatingHTML ({ inset }) {
-  return `
+export function StarRatingHTML ({ html, state }) {
+  let { attrs } = state
+  let { inset } = attrs
+
+  return html`
     <svg
       width="84"
       height="17"
@@ -35,10 +38,8 @@ export function StarRatingHTML ({ inset }) {
 }
 
 export default function StarRating ({ html, state }) {
-  const { attrs } = state
-
   return html`
     ${StarRatingStyles()}
-    ${StarRatingHTML(attrs)}
+    ${StarRatingHTML({ html, state })}
 `
 }
