@@ -13,7 +13,6 @@
   "dependencies": {
     "@begin/data": "^4.0.2",
     "@enhance/arc-plugin-enhance": "^6.1.2",
-    "@enhance/element": "^1.1.2",
     "@enhance/layout-elements": "^0.0.1-alpha.8",
     "tiny-json-http": "^7.5.1"
   },

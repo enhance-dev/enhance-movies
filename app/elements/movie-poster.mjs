@@ -60,7 +60,7 @@ export function MoviePosterHTML({ html, state }) {
       <h2 class="mbs0 mbe-6">${title}</h2>
       <p class="flex gap-4 align-items-center text-1">
         ${percentRemainder ? `<star-rating inset="${percentRemainder}"></star-rating>` : ''}
-        ${vote_average}
+        <span>${vote_average}</span>
       </p>
     </a>`
 }

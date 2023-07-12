@@ -1,16 +1,120 @@
 /* globals HTMLElement customElements */
-import enhance from '@enhance/element'
 import formatTitle from '../lib/formatTitle.mjs'
-import { MoviePosterHTML } from '../elements/movie-poster.mjs'
-import { StarRatingHTML } from '../elements/star-rating.mjs'
 
-enhance('movie-poster', {
-  render: MoviePosterHTML,
-})
+class StarRating extends HTMLElement {
+  constructor() {
+    super()
+    if(this.children.length === 0) {
+      this.innerHTML = `
+        <svg
+          width="84"
+          height="17"
+          viewBox="0 0 84 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use xlink:href="#svg-stars">
+        </svg>
 
-enhance('star-rating', {
-  render: StarRatingHTML,
-})
+        <svg
+          width="84"
+          height="17"
+          viewBox="0 0 84 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute inset-0"
+          clip-path="inset(0 0% 0 0)"
+        >
+         <use xlink:href="#svg-filled-stars">
+        </svg>
+      `
+    }
+    this.fill = this.querySelectorAll('svg')[1]
+  }
+
+  static get observedAttributes() {
+    return [ 'inset' ]
+  }
+
+  attributeChangedCallback(name, old, value) {
+    if (old !== value) {
+      if (name === 'inset') {
+        const clipPath = `inset(0 ${name}% 0 0)`
+        this.fill.setAttribute('clip-path', clipPath)
+      }
+    }
+  }
+}
+
+customElements.define('star-rating', StarRating)
+
+class MoviePoster extends HTMLElement {
+  constructor() {
+    super()
+    if(this.children.length === 0) {
+      this.innerHTML = `
+        <a class="relative flex flex-col">
+          <div class="relative image-wrapper">
+            <img
+              src="/_public/generic-movie.jpg"
+              class="si-100 object-cover"
+            />
+          </div>
+          <h2 class="mbs0 mbe-6"></h2>
+          <p class="flex gap-4 align-items-center text-1">
+            <star-rating></star-rating>
+            <span></span>
+          </p>
+        </a>
+      `
+    }
+    this.link = this.querySelector('a')
+    this.img = this.querySelector('img')
+    this.title = this.querySelector('h2')
+    this.rating = this.querySelector('star-rating')
+    this.average = this.querySelector('p > span')
+  }
+
+  static get observedAttributes() {
+    return [
+      'id',
+      'poster_path',
+      'title',
+      'vote_average'
+    ]
+  }
+
+  attributeChangedCallback(name, old, value) {
+    if (old !== value) {
+
+      if (name === 'id') {
+        this.link.setAttribute('href', `/movie?id=${value}&page=1`)
+      }
+
+      if (name === 'poster_path') {
+        this.img.setAttribute('src', `https://image.tmdb.org/t/p/w342${value}`)
+      }
+
+      if (name === 'title') {
+        this.img.setAttribute('alt', value)
+        // FIXME: this.title.innerText = value throws for some reason
+      }
+
+      if (name === 'vote_average') {
+        const average = Number(value).toFixed(1)
+        const rating = value
+          ? (100 - ((Number(value) / 10) * 100))
+          : 'Not yet rated'
+        if(this.rating) this.rating.setAttribute('inset', rating)
+        this.average.innerHTML = average
+      }
+    }
+  }
+}
+
+customElements.define('movie-poster', MoviePoster)
+
+
 
 class MovieSearch extends HTMLElement {
   constructor() {
@@ -34,6 +138,12 @@ class MovieSearch extends HTMLElement {
     this.searchDialogInput.addEventListener('input', e => this.onInput(e.target.value))
     this.serverForm.classList.add('hidden')
     this.clientSearch.classList.remove('hidden')
+  }
+
+  disconnectedCallback() {
+    this.searchTrigger.removeEventListener('click', () => this.searchDialog.showModal())
+    this.searchDialog.removeEventListener('open', () => this.searchDialogInput.focus())
+    this.searchDialogInput.removeEventListener('input', e => this.onInput(e.target.value))
   }
 
   // Fires every time a user modifies or clears the search input
