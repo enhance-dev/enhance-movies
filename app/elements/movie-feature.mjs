@@ -16,6 +16,7 @@ export default function MovieFeature({ html, state }) {
       }
 
       .backdrop {
+        background-color: hsla(0deg 0% 50% / 0.75);
         background-image: url("https://image.tmdb.org/t/p/w500${backdrop_path}");
         background-size: cover;
         background-repeat: no-repeat;
