@@ -48,7 +48,7 @@ class StarRating extends HTMLElement {
 
 customElements.define('star-rating', StarRating)
 
-class MoviePoster extends HTMLElement {
+class MovieSearchPoster extends HTMLElement {
   constructor() {
     super()
     if(this.children.length === 0) {
@@ -91,7 +91,7 @@ class MoviePoster extends HTMLElement {
         this.link.setAttribute('href', `/movie?id=${value}&page=1`)
       }
 
-      if (name === 'poster_path') {
+      if (name === 'poster_path' && value !== 'null') {
         this.img.setAttribute('src', `https://image.tmdb.org/t/p/w342${value}`)
       }
 
@@ -112,7 +112,7 @@ class MoviePoster extends HTMLElement {
   }
 }
 
-customElements.define('movie-poster', MoviePoster)
+customElements.define('movie-search-poster', MovieSearchPoster)
 
 
 
@@ -193,7 +193,7 @@ class MovieSearch extends HTMLElement {
 
   renderResults() {
     this.resultsContainer.innerHTML = this.results.map(movie => `
-      <movie-poster id='${movie.id}' poster_path='${movie.poster_path}' title='${formatTitle(movie.title)}' vote_average='${movie.vote_average}'></movie-poster>
+      <movie-search-poster id='${movie.id}' poster_path='${movie.poster_path}' title='${formatTitle(movie.title)}' vote_average='${movie.vote_average}'></movie-search-poster>
     `).join('')
   }
 
