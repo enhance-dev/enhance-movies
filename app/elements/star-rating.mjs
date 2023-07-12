@@ -1,18 +1,14 @@
-export function StarRatingStyles() {
-  return `<style>
-  :host {
-    display: block;
-    position: relative;
-  }
-</style>
-`
-}
-
-export function StarRatingHTML ({ html, state }) {
+export default function StarRating ({ html, state }) {
   const { attrs } = state
   const { inset } = attrs
 
   return html`
+    <style>
+      :host {
+        display: block;
+        position: relative;
+      }
+    </style>
     <svg
       width="84"
       height="17"
@@ -35,11 +31,4 @@ export function StarRatingHTML ({ html, state }) {
      <use xlink:href="#svg-filled-stars">
     </svg>
   `
-}
-
-export default function StarRating ({ html, state }) {
-  return html`
-    ${StarRatingStyles()}
-    ${StarRatingHTML({ html, state })}
-`
 }
