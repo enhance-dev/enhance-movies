@@ -1,35 +1,57 @@
 /* globals HTMLElement customElements */
 import formatTitle from '../lib/formatTitle.mjs'
 
-class StarRating extends HTMLElement {
+const TemplateMixin = (superclass) => class extends superclass {
   constructor() {
     super()
-    if(this.children.length === 0) {
-      this.innerHTML = `
-        <svg
-          width="84"
-          height="17"
-          viewBox="0 0 84 17"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <use xlink:href="#svg-stars">
-        </svg>
-
-        <svg
-          width="84"
-          height="17"
-          viewBox="0 0 84 17"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          class="absolute inset-0"
-          clip-path="inset(0 0% 0 0)"
-        >
-         <use xlink:href="#svg-filled-stars">
-        </svg>
-      `
+    const templateName = `${this.tagName.toLowerCase()}-template`
+    const template = document.getElementById(templateName)
+    if (template) {
+      this.template = template
     }
+    else {
+      this.template = document.createElement('template')
+      this.template.innerHTML = this.render()
+      this.template.setAttribute('id', templateName)
+      document.body.appendChild(this.template)
+    }
+
+    if (!this.children.length) {
+      this.replaceChildren(this.template.content.cloneNode(true))
+    }
+  }
+}
+
+class StarRating extends TemplateMixin(HTMLElement) {
+  constructor() {
+    super()
     this.fill = this.querySelectorAll('svg')[1]
+  }
+
+  render() {
+    return `
+      <svg
+        width="84"
+        height="17"
+        viewBox="0 0 84 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use xlink:href="#svg-stars">
+      </svg>
+
+      <svg
+        width="84"
+        height="17"
+        viewBox="0 0 84 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="absolute inset-0"
+        clip-path="inset(0 0% 0 0)"
+      >
+       <use xlink:href="#svg-filled-stars">
+      </svg>
+    `
   }
 
   static get observedAttributes() {
@@ -48,31 +70,32 @@ class StarRating extends HTMLElement {
 
 customElements.define('star-rating', StarRating)
 
-class MovieSearchPoster extends HTMLElement {
+class MovieSearchPoster extends TemplateMixin(HTMLElement) {
   constructor() {
     super()
-    if(this.children.length === 0) {
-      this.innerHTML = `
-        <a class="relative flex flex-col">
-          <div class="relative image-wrapper">
-            <img
-              src="/_public/generic-movie.jpg"
-              class="si-100 object-cover"
-            />
-          </div>
-          <h2 class="mbs0 mbe-6"></h2>
-          <p class="flex gap-4 align-items-center text-1">
-            <star-rating></star-rating>
-            <span></span>
-          </p>
-        </a>
-      `
-    }
     this.link = this.querySelector('a')
     this.img = this.querySelector('img')
     this.movieTitle = this.querySelector('h2')
     this.rating = this.querySelector('star-rating')
     this.average = this.querySelector('p > span')
+  }
+
+  render() {
+    return `
+      <a class="relative flex flex-col">
+        <div class="relative image-wrapper">
+          <img
+            src="/_public/generic-movie.jpg"
+            class="si-100 object-cover"
+          />
+        </div>
+        <h2 class="mbs0 mbe-6"></h2>
+        <p class="flex gap-4 align-items-center text-1">
+          <star-rating></star-rating>
+          <span></span>
+        </p>
+      </a>
+    `
   }
 
   static get observedAttributes() {
