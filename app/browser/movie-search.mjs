@@ -70,7 +70,7 @@ class MoviePoster extends HTMLElement {
     }
     this.link = this.querySelector('a')
     this.img = this.querySelector('img')
-    this.title = this.querySelector('h2')
+    this.movieTitle = this.querySelector('h2')
     this.rating = this.querySelector('star-rating')
     this.average = this.querySelector('p > span')
   }
@@ -97,7 +97,7 @@ class MoviePoster extends HTMLElement {
 
       if (name === 'title') {
         this.img.setAttribute('alt', value)
-        // FIXME: this.title.innerText = value throws for some reason
+        this.movieTitle.innerText = value
       }
 
       if (name === 'vote_average') {
