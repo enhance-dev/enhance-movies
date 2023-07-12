@@ -129,6 +129,7 @@ class MovieSearch extends HTMLElement {
     this.searchDialogInput = this.querySelector('#client-search-input')
     this.resultsTitleElement = this.querySelector('#client-search-results-title')
     this.resultsContainer = this.querySelector('#client-search-results')
+    this.emptyStateContainer = this.querySelector('#no-search-results')
   }
 
   // When the custom element connects, add event listeners, hide the server rendered UI, and show the client UI
@@ -192,19 +193,22 @@ class MovieSearch extends HTMLElement {
   }
 
   renderResults() {
+    this.emptyStateContainer.innerHTML = ''
     this.resultsContainer.innerHTML = this.results.map(movie => `
       <movie-search-poster id='${movie.id}' poster_path='${movie.poster_path}' title='${formatTitle(movie.title)}' vote_average='${movie.vote_average}'></movie-search-poster>
     `).join('')
   }
 
   renderEmptyState() {
-    this.resultsContainer.innerHTML = `<p>We couldn’t find any results for ‘${this.query}’ :(</p>`
+    this.resultsContainer.innerHTML = ''
+    this.emptyStateContainer.innerHTML = `<p>We couldn’t find any results for ‘${this.query}’ :(</p>`
   }
 
   resetResults() {
     this.query = ''
     this.results = []
     this.resultsTitleElement.textContent = ''
+    this.emptyStateContainer.innerHTML = ''
     this.resultsContainer.innerHTML = ''
   }
 }

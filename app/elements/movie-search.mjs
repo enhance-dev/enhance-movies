@@ -37,7 +37,7 @@ export default function MovieSearch ({ html, state }) {
       }
 
       /* Prevent rendering negative spaces when no search term has been entered */
-      [slot='content'] :is(h2, #client-search-results):empty {
+      [slot='content'] :is(h2, #client-search-results, #no-search-results):empty {
         display: none;
       }
 
@@ -74,6 +74,7 @@ export default function MovieSearch ({ html, state }) {
           <input id='client-search-input' name='title' type='search' class='text1 border-be2' placeholder='Enter a title to search for' />
 
           <h2 id='client-search-results-title' class='mb0 text2 font-medium'></h2>
+          <section id='no-search-results'></section>
           <section id='client-search-results'></section>
         </div>
       </movie-dialog>
