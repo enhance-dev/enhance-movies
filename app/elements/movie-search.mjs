@@ -14,6 +14,7 @@ export default function MovieSearch ({ html, state }) {
 
       #server-search-input {
         background: var(--background);
+        color: var(--color);
         max-width: 8rem;
       }
 
