@@ -130,25 +130,39 @@ class MovieSearch extends HTMLElement {
     this.resultsTitleElement = this.querySelector('#client-search-results-title')
     this.resultsContainer = this.querySelector('#client-search-results')
     this.emptyStateContainer = this.querySelector('#no-search-results')
+    this.onInput = this.onInput.bind(this)
+    this.showModal = this.showModal.bind(this)
+    this.focusInput = this.focusInput.bind(this)
   }
 
   // When the custom element connects, add event listeners, hide the server rendered UI, and show the client UI
   connectedCallback() {
-    this.searchTrigger.addEventListener('click', () => this.searchDialog.showModal())
-    this.searchDialog.addEventListener('open', () => this.searchDialogInput.focus())
-    this.searchDialogInput.addEventListener('input', e => this.onInput(e.target.value))
+    this.searchTrigger.addEventListener('click', this.showModal)
+    this.searchDialog.addEventListener('open', this.focusInput)
+    this.searchDialogInput.addEventListener('input', this.onInput)
     this.serverForm.classList.add('hidden')
     this.clientSearch.classList.remove('hidden')
   }
 
+  // When the custom element disconnects, remove event listeners
   disconnectedCallback() {
-    this.searchTrigger.removeEventListener('click', () => this.searchDialog.showModal())
-    this.searchDialog.removeEventListener('open', () => this.searchDialogInput.focus())
-    this.searchDialogInput.removeEventListener('input', e => this.onInput(e.target.value))
+    this.searchTrigger.removeEventListener('click', this.showModal)
+    this.searchDialog.removeEventListener('open', this.focusInput)
+    this.searchDialogInput.removeEventListener('input', this.onInput)
   }
 
+  showModal() {
+    this.searchDialog.showModal()
+  }
+
+  focusInput() {
+    this.searchDialogInput.focus()
+  }
+
+
   // Fires every time a user modifies or clears the search input
-  onInput(value) {
+  onInput(e) {
+    const value = e?.target?.value
     // Value was cleared, either by ESC, input's builtin clear button, or manually
     if (value === '') {
       return this.resetResults()
@@ -195,7 +209,12 @@ class MovieSearch extends HTMLElement {
   renderResults() {
     this.emptyStateContainer.innerHTML = ''
     this.resultsContainer.innerHTML = this.results.map(movie => `
-      <movie-search-poster id='${movie.id}' poster_path='${movie.poster_path}' title='${formatTitle(movie.title)}' vote_average='${movie.vote_average}'></movie-search-poster>
+    <movie-search-poster
+      id='${movie.id}'
+      poster_path='${movie.poster_path}'
+      title='${formatTitle(movie.title)}'
+      vote_average='${movie.vote_average}'
+    ></movie-search-poster>
     `).join('')
   }
 
