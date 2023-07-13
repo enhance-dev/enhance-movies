@@ -1,4 +1,4 @@
-/* globals HTMLElement customElements */
+/* globals document HTMLElement customElements */
 import formatTitle from '../lib/formatTitle.mjs'
 
 const TemplateMixin = (superclass) => class extends superclass {
@@ -10,6 +10,9 @@ const TemplateMixin = (superclass) => class extends superclass {
       this.template = template
     }
     else {
+      if (!this.render) {
+        throw new Error('TemplateMixin requires a render function. Please add one to your subclass.')
+      }
       this.template = document.createElement('template')
       this.template.innerHTML = this.render()
       this.template.setAttribute('id', templateName)
