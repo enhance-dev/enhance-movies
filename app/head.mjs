@@ -61,6 +61,7 @@ export default function Head () {
             transition: background 1s var(--easeOutQuint), color 1s var(--easeOutQuint);
           }
         </style>
+        <meta name="google-site-verification" content="DK6pVRILPsc5BRqfD0WgjNfxb9RiE29X_KhcYPtopnk" />
       </head>
       <body class='font-sans leading3 overflow-x-hidden'>
 `
