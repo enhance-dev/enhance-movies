@@ -1,8 +1,7 @@
 import { getCredits, getMovie, getVideos, getRecommendations } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
-import { getReferer } from '../middleware/referer.mjs'
 
-export let get = [getReferer, fetchGenres, fetchMovie]
+export let get = [fetchGenres, fetchMovie]
 
 export async function fetchMovie (req) {
   const { id, page = 1 } = req.query
@@ -18,6 +17,6 @@ export async function fetchMovie (req) {
     json: { title: {
       primary: "Recommended",
       secondary: "movies"
-    }, movie, shows, genres: req.genres, referer: req.referer, baseUrl }
+    }, movie, shows, genres: req.genres, baseUrl }
   }
 }

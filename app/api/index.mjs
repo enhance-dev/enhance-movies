@@ -1,9 +1,8 @@
 import { getMovies, getVideos } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
-import { getReferer } from '../middleware/referer.mjs'
 import { getActiveRoute } from '../middleware/activeRoute.mjs'
 
-export const get = [getReferer, getActiveRoute, fetchGenres, fetchMovies]
+export const get = [getActiveRoute, fetchGenres, fetchMovies]
 
 export async function fetchMovies (req) {
   const popular = await getMovies('popular', 1)
@@ -23,7 +22,6 @@ export async function fetchMovies (req) {
         trailer,
       },
       genres: req.genres,
-      referer: req.referer,
       activeRoute: req.activeRoute,
     }
   }

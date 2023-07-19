@@ -1,8 +1,7 @@
 import { searchMovies } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
-import { getReferer } from '../middleware/referer.mjs'
 
-export let get = [getReferer, fetchGenres, fetchMovies]
+export let get = [fetchGenres, fetchMovies]
 
 export async function fetchMovies (req) {
   const { q, page = 1 } = req.query
@@ -12,6 +11,6 @@ export async function fetchMovies (req) {
     json: { title: {
       primary: "Results for",
       secondary: `‘${q}’`
-    }, shows, genres: req.genres, referer: req.referer, baseUrl }
+    }, shows, genres: req.genres, baseUrl }
   }
 }
