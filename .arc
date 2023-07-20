@@ -6,6 +6,7 @@ prune true
 
 @plugins
 enhance/arc-plugin-enhance
+mock-tmdb
 
 @enhance-styles
 config styleguide.json
