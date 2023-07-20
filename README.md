@@ -4,7 +4,7 @@ This is a Movies App built using [Enhance](https://enhance.dev) and [The Movie D
 
 ## Demo
 
-A [live deployment](https://enhance-movies.com/) of this app is available to try it out.
+A <font size="5">[live demo](https://enhance-movies.com/)</font> of this app is available to try it out.
 
 ## Contributing
 
