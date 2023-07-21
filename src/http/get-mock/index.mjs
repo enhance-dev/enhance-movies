@@ -6,6 +6,13 @@ function readJson(filename) {
 }
 
 export async function handler (req) {
+  // Don't make this route available in production only local testing
+  if (process.env.ARC_ENV === 'production' || process.env.ARC_ENV === 'staging') {
+    return {
+      status: 404
+    }
+  }
+
   const path = req.rawPath
   if (path === '/mock/genre/movie/list') {
     return readJson('./mocks/genres.json')
