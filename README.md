@@ -32,6 +32,10 @@ TMDB_API_TOKEN=<My API token>
 
 - `npm start`
 
+### What if I don't want to get a TMDB API Token?
+
+If your `TMDB_API_TOKEN` is not set then you will receive mock data provided by the `mock-tmdb` plugin in `src/plugins/mock-tmdb.mjs`. I sure hope you like "Transformers: Rise of the Beasts".
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

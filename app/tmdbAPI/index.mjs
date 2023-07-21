@@ -1,12 +1,12 @@
 import tiny from 'tiny-json-http'
 
-const TMDB_API_BASE_URL = 'https://api.themoviedb.org'
-const TMDB_API_VERSION = '3'
-const baseUrl = `${TMDB_API_BASE_URL}/${TMDB_API_VERSION}`
-
 const {
   TMDB_API_TOKEN
 } = process.env
+
+const TMDB_API_BASE_URL = TMDB_API_TOKEN ? 'https://api.themoviedb.org' : 'http://localhost:3333/mock'
+const TMDB_API_VERSION = '3'
+const baseUrl = TMDB_API_TOKEN ? `${TMDB_API_BASE_URL}/${TMDB_API_VERSION}` : `${TMDB_API_BASE_URL}`
 
 const getJSON = async function(url) {
   const response = await tiny.get({
