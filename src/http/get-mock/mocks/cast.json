@@ -1,0 +1,367 @@
+{
+    "page": 1,
+    "results": [
+      {
+        "adult": false,
+        "backdrop_path": "/qWQSnedj0LCUjWNp9fLcMtfgadp.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 667538,
+        "original_language": "en",
+        "original_title": "Transformers: Rise of the Beasts",
+        "overview": "When a new threat capable of destroying the entire planet emerges, Optimus Prime and the Autobots must team up with a powerful faction known as the Maximals. With the fate of humanity hanging in the balance, humans Noah and Elena will do whatever it takes to help the Transformers as they engage in the ultimate battle to save Earth.",
+        "popularity": 8466.323,
+        "poster_path": "/gPbM0MK8CP8A174rmUwGsADNYKD.jpg",
+        "release_date": "2023-06-06",
+        "title": "Transformers: Rise of the Beasts",
+        "video": false,
+        "vote_average": 7.3,
+        "vote_count": 1431
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/9IDJpHROaC0S1ZlIxrvzOcOX5yC.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 629542,
+        "original_language": "en",
+        "original_title": "The Bad Guys",
+        "overview": "When the Bad Guys, a crew of criminal animals, are finally caught after years of heists and being the world’s most-wanted villains, Mr. Wolf brokers a deal to save them all from prison.",
+        "popularity": 78.109,
+        "poster_path": "/7qop80YfuO0BwJa1uXk1DXUUEwv.jpg",
+        "release_date": "2022-03-17",
+        "title": "The Bad Guys",
+        "video": false,
+        "vote_average": 7.7,
+        "vote_count": 1570
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/uovH5k4BAEPqXqxgwVrTtqH169g.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 373571,
+        "original_language": "en",
+        "original_title": "Godzilla: King of the Monsters",
+        "overview": "Follows the heroic efforts of the crypto-zoological agency Monarch as its members face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species, thought to be mere myths, rise again, they all vie for supremacy, leaving humanity's very existence hanging in the balance.",
+        "popularity": 75.073,
+        "poster_path": "/fQ40gmFM4p03tXwMxQQKh2cCBW4.jpg",
+        "release_date": "2019-05-29",
+        "title": "Godzilla: King of the Monsters",
+        "video": false,
+        "vote_average": 6.7,
+        "vote_count": 5392
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/dDYpjrwh1wNVQk0rEpc9P81wQt4.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 332562,
+        "original_language": "en",
+        "original_title": "A Star Is Born",
+        "overview": "Seasoned musician Jackson Maine discovers — and falls in love with — struggling artist Ally. She has just about given up on her dream to make it big as a singer — until Jack coaxes her into the spotlight. But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons.",
+        "popularity": 59.897,
+        "poster_path": "/wrFpXMNBRj2PBiN4Z5kix51XaIZ.jpg",
+        "release_date": "2018-09-20",
+        "title": "A Star Is Born",
+        "video": false,
+        "vote_average": 7.5,
+        "vote_count": 10944
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/ybGEvB6725PkVuUfEo2txLGRwTj.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 446893,
+        "original_language": "en",
+        "original_title": "Trolls World Tour",
+        "overview": "Queen Poppy and Branch make a surprising discovery — there are other Troll worlds beyond their own, and their distinct differences create big clashes between these various tribes. When a mysterious threat puts all of the Trolls across the land in danger, Poppy, Branch, and their band of friends must embark on an epic quest to create harmony among the feuding Trolls to unite them against certain doom.",
+        "popularity": 45.808,
+        "poster_path": "/7W0G3YECgDAfnuiHG91r8WqgIOe.jpg",
+        "release_date": "2020-03-11",
+        "title": "Trolls World Tour",
+        "video": false,
+        "vote_average": 7.4,
+        "vote_count": 1893
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/2M2JxEv3HSpjnZWjY9NOdGgfUd.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 553604,
+        "original_language": "en",
+        "original_title": "Honest Thief",
+        "overview": "A bank robber tries to turn himself in because he's falling in love and wants to live an honest life...but when he realizes the Feds are more corrupt than him, he must fight back to clear his name.",
+        "popularity": 42.18,
+        "poster_path": "/zeD4PabP6099gpE0STWJrJrCBCs.jpg",
+        "release_date": "2020-09-03",
+        "title": "Honest Thief",
+        "video": false,
+        "vote_average": 6.5,
+        "vote_count": 1506
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/ca9zpwoRLS9ZKsKj6DsLbGEZ7iD.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 896221,
+        "original_language": "en",
+        "original_title": "Trolls Holiday in Harmony",
+        "overview": "Queen Poppy plans the first annual Trolls Kingdom Secret Holiday Gift Swap, but things don't go quite as expected.",
+        "popularity": 31.724,
+        "poster_path": "/z5ge6Cr8lnElNIYU7fn2WoMg7SD.jpg",
+        "release_date": "2021-11-26",
+        "title": "Trolls Holiday in Harmony",
+        "video": false,
+        "vote_average": 7.2,
+        "vote_count": 169
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/uWVkEo9PWHu9algZsiLPi6sRU64.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 556574,
+        "original_language": "en",
+        "original_title": "Hamilton",
+        "overview": "Presenting the tale of American founding father Alexander Hamilton, this filmed version of the original Broadway smash hit is the story of America then, told by America now.",
+        "popularity": 19.787,
+        "poster_path": "/h1B7tW0t399VDjAcWJh8m87469b.jpg",
+        "release_date": "2020-07-03",
+        "title": "Hamilton",
+        "video": false,
+        "vote_average": 8.2,
+        "vote_count": 1165
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/uEJuqp08dH6IQwZJGASlPZOXqKu.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 467909,
+        "original_language": "en",
+        "original_title": "In the Heights",
+        "overview": "The story of Usnavi, a bodega owner who has mixed feelings about closing his store and retiring to the Dominican Republic or staying in Washington Heights.",
+        "popularity": 18.991,
+        "poster_path": "/RO4KoJyoQMQzh9z76d4v4FJMmJ.jpg",
+        "release_date": "2021-06-10",
+        "title": "In the Heights",
+        "video": false,
+        "vote_average": 7.3,
+        "vote_count": 606
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/zW0hp6O61wzWhf1IES7raTBpSS4.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 336011,
+        "original_language": "en",
+        "original_title": "White Girl",
+        "overview": "Summer, New York City. A college girl falls hard for a guy she just met. After a night of partying goes wrong, she goes to wild extremes to get him back.",
+        "popularity": 18.506,
+        "poster_path": "/zBmIjDObX0qMQbTWn3qBAANopUx.jpg",
+        "release_date": "2016-09-02",
+        "title": "White Girl",
+        "video": false,
+        "vote_average": 5.7,
+        "vote_count": 428
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/kVaTdQ4N3j64pIpFao31v7DeYcu.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 426256,
+        "original_language": "en",
+        "original_title": "Patti Cake$",
+        "overview": "Straight out of Jersey comes Patricia Dombrowski, a.k.a. Killa P, a.k.a. Patti Cake$, an aspiring rapper fighting through a world of strip malls and strip clubs on an unlikely quest for glory.",
+        "popularity": 12.303,
+        "poster_path": "/11MVxyp77zUPwc4cmqsUumNQYWK.jpg",
+        "release_date": "2017-08-18",
+        "title": "Patti Cake$",
+        "video": false,
+        "vote_average": 6.7,
+        "vote_count": 182
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/4Nm7zZbRLFrNqzaHQB604pQAV3F.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 489934,
+        "original_language": "en",
+        "original_title": "Monsters and Men",
+        "overview": "After capturing an illegal act of police violence on his cellphone, a Brooklyn street hustler sets off a series of events that alter the lives of a local police officer and a star high-school athlete.",
+        "popularity": 7.431,
+        "poster_path": "/u6FtNjPCVF3yRMFGvbzNj56i1Dj.jpg",
+        "release_date": "2018-09-22",
+        "title": "Monsters and Men",
+        "video": false,
+        "vote_average": 6.1,
+        "vote_count": 53
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/w7x0P7yOoiFqSe4BJRITSWK4don.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 792293,
+        "original_language": "en",
+        "original_title": "Dumb Money",
+        "overview": "Internet commenter Keith Gill sinks his life savings into GameStop stock and posts about it. When his social posts start blowing up, so do his life and the lives of everyone following him. As a stock tip becomes a movement, everyone gets rich—until the billionaires fight back, and both sides find their worlds turned upside down.",
+        "popularity": 6.402,
+        "poster_path": "/nrcIpuegOsmIobqFy59FRZolH8K.jpg",
+        "release_date": "2023-09-21",
+        "title": "Dumb Money",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+          null
+        ],
+        "id": 718821,
+        "original_language": "en",
+        "original_title": "Twisters",
+        "overview": "A sequel to the 1996 film about stormchasing scientists studying tornados.",
+        "popularity": 5.943,
+        "poster_path": "/uN6jqf1LvrRublkX9ZoRwGJHMMq.jpg",
+        "release_date": "2024-07-17",
+        "title": "Twisters",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/3R0kEOavXjuVI45wvFKaZSuWTo6.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 479316,
+        "original_language": "en",
+        "original_title": "Summer Days, Summer Nights",
+        "overview": "On the south shore of Long Island in the summer of 1982, a group of working-class teenagers and 20-somethings work their summer jobs, fall in and out of love, and wrestle with what the future holds when the summer ends and the real world beckons.",
+        "popularity": 5.45,
+        "poster_path": "/qiJuoCkE50Pyw0QAkUIblEsveaH.jpg",
+        "release_date": "2018-04-27",
+        "title": "Summer Days, Summer Nights",
+        "video": false,
+        "vote_average": 5.4,
+        "vote_count": 15
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/eBjtU1wUFq8qEllmROSmYG3dycr.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 605722,
+        "original_language": "en",
+        "original_title": "Distant",
+        "overview": "After crash-landing on an alien planet, an asteroid miner must contend with the challenges of his new surroundings, while making his way across the harsh terrain to the only other survivor – a woman who is trapped in her escape pod.",
+        "popularity": 4.041,
+        "poster_path": "/rXbgn0NKeBOGyqUGa6hpYF996A6.jpg",
+        "release_date": "2024-01-19",
+        "title": "Distant",
+        "video": false,
+        "vote_average": 0,
+        "vote_count": 0
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/2grJxuJgCg2WRxtZp2t8beea4yP.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 513332,
+        "original_language": "en",
+        "original_title": "21 Chump Street",
+        "overview": "The true story of Justin Laboy, a high school student who falls in love with new girl Naomi, who is actually an undercover cop.",
+        "popularity": 3.476,
+        "poster_path": "/9ZR33augKLTlccCu9dmSyzNQMl5.jpg",
+        "release_date": "2014-06-20",
+        "title": "21 Chump Street",
+        "video": false,
+        "vote_average": 8.3,
+        "vote_count": 9
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/aXgg5WywNZZA2kIQ085e7ouvAqC.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 981424,
+        "original_language": "en",
+        "original_title": "Maraschino Ruby",
+        "overview": "Misty Luggins sets a trap for the Bad Guys, but they were already caught and in custody for another crime; stealing a push pop... allegedly.",
+        "popularity": 2.86,
+        "poster_path": "/iExmJYzQ3DGghWqDqdSCrXTq5Sx.jpg",
+        "release_date": "2022-06-15",
+        "title": "Maraschino Ruby",
+        "video": false,
+        "vote_average": 9,
+        "vote_count": 5
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/1203Iu8lN8DnfUZhYsb1RaFR58N.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 415078,
+        "original_language": "en",
+        "original_title": "Hamilton's America",
+        "overview": "This documentary delves deeper into the creation of the Hamilton musical, revealing Lin-Manuel Miranda's process of absorbing and then adapting Hamilton's epic story into ground-breaking musical theater.",
+        "popularity": 2.843,
+        "poster_path": "/kYiEsmvZhjV5gXaiwbk8KprZIXa.jpg",
+        "release_date": "2016-10-01",
+        "title": "Hamilton's America",
+        "video": false,
+        "vote_average": 6.8,
+        "vote_count": 38
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/bqtCBz3BTvY9cBedjpeeGSgk6MR.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 578547,
+        "original_language": "en",
+        "original_title": "The Road to Stardom: The Making of A Star is Born",
+        "overview": "A look at the making of “A Star Is Born,” featuring director/star/writer/producer Bradley Cooper and star Lady Gaga, both of whom also wrote and produced many of the film’s songs, as well as performed them live for the movie.",
+        "popularity": 2.459,
+        "poster_path": "/mRlnPb85ZbAGpTYsWI57Huk1Ggt.jpg",
+        "release_date": "2018-12-07",
+        "title": "The Road to Stardom: The Making of A Star is Born",
+        "video": false,
+        "vote_average": 7.4,
+        "vote_count": 11
+      }
+    ],
+    "total_pages": 2,
+    "total_results": 26
+  }

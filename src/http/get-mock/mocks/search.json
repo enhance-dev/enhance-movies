@@ -1,0 +1,367 @@
+{
+    "page": 1,
+    "results": [
+      {
+        "adult": false,
+        "backdrop_path": "/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 11,
+        "original_language": "en",
+        "original_title": "Star Wars",
+        "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+        "popularity": 81.975,
+        "poster_path": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+        "release_date": "1977-05-25",
+        "title": "Star Wars",
+        "video": false,
+        "vote_average": 8.204,
+        "vote_count": 18885
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 181812,
+        "original_language": "en",
+        "original_title": "Star Wars: The Rise of Skywalker",
+        "overview": "The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins.",
+        "popularity": 49.735,
+        "poster_path": "/db32LaOibwEliAmSL2jjDF6oDdj.jpg",
+        "release_date": "2019-12-18",
+        "title": "Star Wars: The Rise of Skywalker",
+        "video": false,
+        "vote_average": 6.379,
+        "vote_count": 8882
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 181808,
+        "original_language": "en",
+        "original_title": "Star Wars: The Last Jedi",
+        "overview": "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.",
+        "popularity": 53.288,
+        "poster_path": "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
+        "release_date": "2017-12-13",
+        "title": "Star Wars: The Last Jedi",
+        "video": false,
+        "vote_average": 6.832,
+        "vote_count": 14136
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 140607,
+        "original_language": "en",
+        "original_title": "Star Wars: The Force Awakens",
+        "overview": "Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.",
+        "popularity": 55.755,
+        "poster_path": "/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg",
+        "release_date": "2015-12-15",
+        "title": "Star Wars: The Force Awakens",
+        "video": false,
+        "vote_average": 7.295,
+        "vote_count": 18168
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/iflKt34Ck2JpY2PY9wW1zwdJgJi.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 782054,
+        "original_language": "ja",
+        "original_title": "映画ドラえもん のび太の宇宙小戦争 2021",
+        "overview": "One day during summer vacation, a palm-sized alien named Papi appears from a small rocket that Nobita picks up. He is the president of Pirika, a small planet in outer space, and has come to Earth to escape the rebels. Doraemon and his friends are puzzled by Papi’s small size, but as they play together using the secret tool “Small Light”, they gradually become friends. However, a whale-shaped space battleship comes to earth and attacks Doraemon, Nobita and the others in order to capture Papi. Feeling responsible for getting everyone involved, Papi tries to stand up to the rebels. Doraemon and his friends leave for the planet Pirika to protect their dear friend and his home.",
+        "popularity": 22.146,
+        "poster_path": "/48gKZioIDeUOI0afbYv3kh9u9RQ.jpg",
+        "release_date": "2022-03-04",
+        "title": "Doraemon: Nobita's Little Star Wars 2021",
+        "video": false,
+        "vote_average": 5.814,
+        "vote_count": 94
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+          null
+        ],
+        "id": 432134,
+        "original_language": "en",
+        "original_title": "Star Wars: Heroes & Villains",
+        "overview": "A look at the creation and filming of the various heroes and villains from all six Star Wars movies, leading up to the release of Star Wars: Episode III - Revenge of the Sith.",
+        "popularity": 2.014,
+        "poster_path": "/9ReI6qt3bvsIxUZkDpOzaCpiLwx.jpg",
+        "release_date": "2005-05-03",
+        "title": "Star Wars: Heroes & Villains",
+        "video": false,
+        "vote_average": 7.265,
+        "vote_count": 17
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/ojHCeDULAkQK25700fhRU75Tur2.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 348350,
+        "original_language": "en",
+        "original_title": "Solo: A Star Wars Story",
+        "overview": "Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian.",
+        "popularity": 38.024,
+        "poster_path": "/3IGbjc5ZC5yxim5W0sFING2kdcz.jpg",
+        "release_date": "2018-05-15",
+        "title": "Solo: A Star Wars Story",
+        "video": false,
+        "vote_average": 6.563,
+        "vote_count": 7787
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/dUkCHy02dtFWQwyCKQKlf1sRm0D.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 161704,
+        "original_language": "ja",
+        "original_title": "映画ドラえもん のび太の宇宙小戦争",
+        "overview": "Papi, the tiny president of a faraway planet, escapes to Earth to avoid being captured by the military forces that took over. Despite being welcomed by Doraemon, Nobita and their friends, the little alien notices that his enemies have also reached this world and doesn't want to get his human friends involved in this war. Doraemon, Nobita, Gian, Suneo, and Shizuka start a big adventure as they try to hide and protect Papi.",
+        "popularity": 11.852,
+        "poster_path": "/oLXqorJ3CtXkR90wCBkg4WnITL3.jpg",
+        "release_date": "1985-03-16",
+        "title": "Doraemon: Nobita's Little Star Wars",
+        "video": false,
+        "vote_average": 6.774,
+        "vote_count": 31
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/8mTHUXS3vwub5ZlovQkZ8veQUah.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 330459,
+        "original_language": "en",
+        "original_title": "Rogue One: A Star Wars Story",
+        "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
+        "popularity": 41.097,
+        "poster_path": "/i0yw1mFbB7sNGHCs7EXZPzFkdA1.jpg",
+        "release_date": "2016-12-14",
+        "title": "Rogue One: A Star Wars Story",
+        "video": false,
+        "vote_average": 7.487,
+        "vote_count": 14183
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/wDe8LzwuvHYYiuwyNfxdYQq8ti4.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 1893,
+        "original_language": "en",
+        "original_title": "Star Wars: Episode I - The Phantom Menace",
+        "overview": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.",
+        "popularity": 39.692,
+        "poster_path": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
+        "release_date": "1999-05-19",
+        "title": "Star Wars: Episode I - The Phantom Menace",
+        "video": false,
+        "vote_average": 6.531,
+        "vote_count": 13353
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/abwxHfymXGAbbH3lo9PDEJEfvtW.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 1894,
+        "original_language": "en",
+        "original_title": "Star Wars: Episode II - Attack of the Clones",
+        "overview": "Following an assassination attempt on Senator Padmé Amidala, Jedi Knights Anakin Skywalker and Obi-Wan Kenobi investigate a mysterious plot that could change the galaxy forever.",
+        "popularity": 37.431,
+        "poster_path": "/oZNPzxqM2s5DyVWab09NTQScDQt.jpg",
+        "release_date": "2002-05-15",
+        "title": "Star Wars: Episode II - Attack of the Clones",
+        "video": false,
+        "vote_average": 6.553,
+        "vote_count": 12107
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/f53Jujiap580mgfefID0T0g2e17.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 857702,
+        "original_language": "en",
+        "original_title": "LEGO Star Wars Terrifying Tales",
+        "overview": "Poe Dameron and BB-8 must face the greedy crime boss Graballa the Hutt, who has purchased Darth Vader’s castle and is renovating it into the galaxy’s first all-inclusive Sith-inspired luxury hotel.",
+        "popularity": 22.423,
+        "poster_path": "/fYiaBZDjyXjvlY6EDZMAxIhBO1I.jpg",
+        "release_date": "2021-10-01",
+        "title": "LEGO Star Wars Terrifying Tales",
+        "video": false,
+        "vote_average": 6.831,
+        "vote_count": 216
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/5vDuLrjJXFS9PTF7Q1xzobmYKR9.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 1895,
+        "original_language": "en",
+        "original_title": "Star Wars: Episode III - Revenge of the Sith",
+        "overview": "The evil Darth Sidious enacts his final plan for unlimited power -- and the heroic Jedi Anakin Skywalker must choose a side.",
+        "popularity": 35.289,
+        "poster_path": "/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg",
+        "release_date": "2005-05-17",
+        "title": "Star Wars: Episode III - Revenge of the Sith",
+        "video": false,
+        "vote_average": 7.408,
+        "vote_count": 12561
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/xEdnGUc8KeZ7h0eEgSN3ERhjgL0.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 12180,
+        "original_language": "en",
+        "original_title": "Star Wars: The Clone Wars",
+        "overview": "As the Clone Wars sweep through the galaxy, the heroic Jedi Knights struggle to maintain order and restore peace. More and more systems are falling prey to the forces of the dark side as the Galactic Republic slips further and further under the sway of the Separatists and their never-ending droid army. Anakin Skywalker and his Padawan learner Ahsoka Tano find themselves on a mission with far-reaching consequences, one that brings them face-to-face with crime lord Jabba the Hutt. But Count Dooku and his sinister agents, including the nefarious Asajj Ventress, will stop at nothing to ensure that Anakin and Ahsoka fail at their quest. Meanwhile, on the front lines of the Clone Wars, Obi-Wan Kenobi and Master Yoda lead the massive clone army in a valiant effort to resist the forces of the dark side...",
+        "popularity": 15.099,
+        "poster_path": "/iJQfixW818LUdSXlCDL3JZm0S0g.jpg",
+        "release_date": "2008-08-05",
+        "title": "Star Wars: The Clone Wars",
+        "video": false,
+        "vote_average": 6.122,
+        "vote_count": 1786
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/1Lhc32P0a62BgMFgd20wXR1osR3.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 732670,
+        "original_language": "en",
+        "original_title": "LEGO Star Wars Holiday Special",
+        "overview": "As her friends prep for a Life Day holiday celebration, Rey journeys with BB-8 on a quest to gain a deeper knowledge of the Force at a mysterious Jedi Temple. There, she embarks on a cross-timeline adventure through beloved moments in Star Wars history, coming into contact with iconic heroes and villains from all eras of the saga. But will she make it back in time for the Life Day feast?",
+        "popularity": 17.998,
+        "poster_path": "/zyzJSI7UZZzz5Toj10rYGF5689z.jpg",
+        "release_date": "2020-11-17",
+        "title": "LEGO Star Wars Holiday Special",
+        "video": false,
+        "vote_average": 6.642,
+        "vote_count": 282
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/98CXGiN2bIh6HUnRjFNGgA9o4FZ.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 956879,
+        "original_language": "fr",
+        "original_title": "Dans l’ombre du Star Wars Kid",
+        "overview": "Ghyslain Raza, better known as the “Star Wars Kid,” breaks his silence to reflect on our hunger for content and the right to be forgotten in the digital age.",
+        "popularity": 2.837,
+        "poster_path": "/zspMlOFJ76g5KyfmucgnvnkJnuN.jpg",
+        "release_date": "2022-03-30",
+        "title": "Star Wars Kid: The Rise of the Digital Shadows",
+        "video": false,
+        "vote_average": 7.6,
+        "vote_count": 8
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/vV5knD9jlW8QaOhCgf4129hbIIh.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 980804,
+        "original_language": "en",
+        "original_title": "LEGO Star Wars Summer Vacation",
+        "overview": "Looking for a much-needed break, Finn arranges a surprise vacation for his friends Rey, Poe, Rose, Chewie, BB-8, R2-D2, and C-3PO, aboard the luxurious Halcyon. However, Finn's plan to have one last hurrah together quickly goes awry.",
+        "popularity": 20.503,
+        "poster_path": "/2SatEFCs04oFRqkZuY1fODYXeFI.jpg",
+        "release_date": "2022-08-05",
+        "title": "LEGO Star Wars Summer Vacation",
+        "video": false,
+        "vote_average": 6.04,
+        "vote_count": 62
+      },
+      {
+        "adult": false,
+        "backdrop_path": null,
+        "genre_ids": [
+          null
+        ],
+        "id": 405572,
+        "original_language": "en",
+        "original_title": "Star Wars Directed by Ken Loach",
+        "overview": "Trailer for Ken Loach's new sci fi movie set in Northern England. (Sort of.) A parody by Haiste and Lawrence.  First Prize ShortCom 2016 jury select winner.",
+        "popularity": 0.6,
+        "poster_path": null,
+        "release_date": "2015-08-21",
+        "title": "Ken Loach's Star Wars",
+        "video": false,
+        "vote_average": 8.3,
+        "vote_count": 3
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/ae9xlnkS2qb5Dy9Mtlu68AWh42O.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 74849,
+        "original_language": "en",
+        "original_title": "The Star Wars Holiday Special",
+        "overview": "Luke Skywalker and Han Solo battle evil Imperial forces to help Chewbacca reach his imperiled family on the Wookiee planet - in time for Life Day, their most important day of the year!",
+        "popularity": 13.475,
+        "poster_path": "/eLIKCGIiYVaplbhKFGcPzmiywF2.jpg",
+        "release_date": "1978-12-01",
+        "title": "The Star Wars Holiday Special",
+        "video": false,
+        "vote_average": 3.332,
+        "vote_count": 410
+      },
+      {
+        "adult": false,
+        "backdrop_path": "/uNjBnOmdjZoiWTLQ938YJZ1cYVU.jpg",
+        "genre_ids": [
+          null
+        ],
+        "id": 392216,
+        "original_language": "en",
+        "original_title": "Phineas and Ferb: Star Wars",
+        "overview": "Phineas and Ferb become the galaxy's unlikeliest last hope when they must return the Death Star plans to the Rebel Alliance.",
+        "popularity": 12.44,
+        "poster_path": "/xomphpz7MIasqVluPX83TjoTL8G.jpg",
+        "release_date": "2014-07-26",
+        "title": "Phineas and Ferb: Star Wars",
+        "video": false,
+        "vote_average": 7.047,
+        "vote_count": 170
+      }
+    ],
+    "total_pages": 8,
+    "total_results": 160
+  }

@@ -1,30 +1,35 @@
-import { getMockCredits, getMockMovie, getMockMovies, getMockVideos, getMockRecommendations, getMockPerson, getMockMovieWithCast, searchMockMovies, getMockGenres, getMockGenreMovies } from './mock.mjs'
+import { readFileSync } from 'fs'
+
+function readJson(filename) {
+  const data = readFileSync(filename)
+  return JSON.parse(data)
+}
 
 export async function handler (req) {
   const path = req.rawPath
   if (path === '/mock/genre/movie/list') {
-    return getMockGenres()
+    return readJson('./mocks/genres.json')
   } else if (path.startsWith('/mock/discover/movie')) {
     if (req.queryStringParameters.with_cast) {
-      return getMockMovieWithCast()
+      return readJson('./mocks/cast.json')
     } else {
-      return getMockGenreMovies()
+      return readJson('./mocks/genre.json')
     }
   } else if (path.startsWith('/mock/person')) {
-    return getMockPerson()
+    return readJson('./mocks/person.json')
   } else if (path.startsWith('/mock/search')) {
-    return searchMockMovies()
+    return readJson('./mocks/search.json')
   } else if (path.endsWith('credits')) {
-    return getMockCredits()
+    return readJson('./mocks/credits.json')
   } else if (path.endsWith('videos')) {
-    return getMockVideos()
+    return readJson('./mocks/videos.json')
   } else if (path.includes('recommendations')) {
-    return getMockRecommendations()
+    return readJson('./mocks/recommendations.json')
   } else if (path.startsWith('/mock/movie')) {
     if (req.queryStringParameters.page) {
-      return getMockMovies()
+      return readJson('./mocks/movies.json')
     } else {
-      return getMockMovie()
+      return readJson('./mocks/movie.json')
     }
   }
 }
