@@ -64,7 +64,7 @@ class StarRating extends TemplateMixin(HTMLElement) {
   attributeChangedCallback(name, old, value) {
     if (old !== value) {
       if (name === 'inset') {
-        const clipPath = `inset(0 ${name}% 0 0)`
+        const clipPath = `inset(0 ${value}% 0 0)`
         this.fill.setAttribute('clip-path', clipPath)
       }
     }
