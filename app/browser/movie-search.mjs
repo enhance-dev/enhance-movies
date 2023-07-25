@@ -2,12 +2,18 @@
 import formatTitle from '../lib/formatTitle.mjs'
 import MoviePosterHTML from '../elements/movie-poster.mjs'
 import StarRatingHTML from '../elements/star-rating.mjs'
+// This stubs out the store. It is used when rendering the template to match the function signature of SSR
 const api = {
   store: {}
 }
 
+// Instance of the Mixer mixin factory
 const mix = (superclass) => new Mixer(superclass)
 
+// Mixin factory for adding a list of mixins to a class
+/*
+ * mix(Class).with(OtherClass, AnotherClass, YetAnotherClass)
+*/
 class Mixer {
   constructor(superclass) {
     this.superclass = superclass
@@ -18,6 +24,7 @@ class Mixer {
   }
 }
 
+// Enhance Base Element to match the SSR function signature
 export default class EnhanceBase extends HTMLElement {
   constructor() {
     super()
@@ -56,33 +63,47 @@ export default class EnhanceBase extends HTMLElement {
     return collect.join('')
   }
 }
-
+// Mixin specifically for reusing SFCs as Custom Elements in the browser
 const CustomElementMixin = (superclass) => class extends superclass {
   constructor() {
     super()
+    // Removes style tags as they are already inserted into the head by SSR
+    // TODO: If only added dynamically in the browser we need to insert the style tag after running the style transform on it. As well as handle deduplication.
     this.template.content.querySelectorAll('style')
       .forEach((tag) => { this.template.content.removeChild(tag) })
+    // Removes script tags as they are already appended to the body by SSR
+    // TODO: If only added dynamically in the browser we need to insert the script tag after running the script transform on it. As well as handle deduplication.
     this.template.content.querySelectorAll('script')
       .forEach((tag) => { this.template.content.removeChild(tag) })
 
+    // If the Custom Element was already expanded by SSR it will have children so do not replaceChildren
     if (!this.children.length) {
+      // If this Custom Element was added dynamically with JavaScript then use the template contents to expand the element
       this.replaceChildren(this.template.content.cloneNode(true))
     }
   }
 }
 
+// Mixin to create add a reusable template into the document
 const TemplateMixin = (superclass) => class extends superclass {
   constructor() {
     super()
+    // Make a unique name for the template based on the elements tagName
     const templateName = `${this.tagName.toLowerCase()}-template`
+    // See if the template is already added to the document
     const template = document.getElementById(templateName)
     if (template) {
+      // Reuse the template in the document if it exists
       this.template = template
     }
     else {
+      // Create a template reusable template element
       this.template = document.createElement('template')
+      // Render the SSR function into the template contents
       this.template.innerHTML = this.render({ html: this.html, state: this.state })
+      // Add the template name
       this.template.setAttribute('id', templateName)
+      // Append the template to the body for subsequent elements to reuse
       document.body.appendChild(this.template)
     }
   }
