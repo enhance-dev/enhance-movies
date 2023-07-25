@@ -1,5 +1,75 @@
 /* globals document HTMLElement customElements */
 import formatTitle from '../lib/formatTitle.mjs'
+import MoviePosterHTML from '../elements/movie-poster.mjs'
+import StarRatingHTML from '../elements/star-rating.mjs'
+const api = {
+  store: {}
+}
+
+const mix = (superclass) => new Mixer(superclass)
+
+class Mixer {
+  constructor(superclass) {
+    this.superclass = superclass
+  }
+
+  with(...mixins) {
+    return mixins.reduce((c, mixin) => mixin(c), this.superclass)
+  }
+}
+
+export default class EnhanceBase extends HTMLElement {
+  constructor() {
+    super()
+    this.api = api || {}
+    this.store = this.api?.store || {}
+    this.context = {}
+  }
+
+  get state() {
+    const attrs = this.attributes.length
+      ? this.attrsToObject(this.attributes)
+      : {}
+
+    return {
+      attrs,
+      context: this.context,
+      store: this.store
+    }
+  }
+
+  attrsToObject(attrs = []) {
+    const attrsObj = {}
+    for (let d = attrs.length - 1; d >= 0; d--) {
+      let attr = attrs[d]
+      attrsObj[attr.nodeName] = attr.nodeValue
+    }
+    return attrsObj
+  }
+
+  html(strings, ...values) {
+    const collect = []
+    for (let i = 0; i < strings.length - 1; i++) {
+      collect.push(strings[i], values[i])
+    }
+    collect.push(strings[strings.length - 1])
+    return collect.join('')
+  }
+}
+
+const CustomElementMixin = (superclass) => class extends superclass {
+  constructor() {
+    super()
+    this.template.content.querySelectorAll('style')
+      .forEach((tag) => { this.template.content.removeChild(tag) })
+    this.template.content.querySelectorAll('script')
+      .forEach((tag) => { this.template.content.removeChild(tag) })
+
+    if (!this.children.length) {
+      this.replaceChildren(this.template.content.cloneNode(true))
+    }
+  }
+}
 
 const TemplateMixin = (superclass) => class extends superclass {
   constructor() {
@@ -10,51 +80,23 @@ const TemplateMixin = (superclass) => class extends superclass {
       this.template = template
     }
     else {
-      if (!this.render) {
-        throw new Error('TemplateMixin requires a render function. Please add one to your subclass.')
-      }
       this.template = document.createElement('template')
-      this.template.innerHTML = this.render()
+      this.template.innerHTML = this.render({ html: this.html, state: this.state })
       this.template.setAttribute('id', templateName)
       document.body.appendChild(this.template)
-    }
-
-    if (!this.children.length) {
-      this.replaceChildren(this.template.content.cloneNode(true))
     }
   }
 }
 
-class StarRating extends TemplateMixin(HTMLElement) {
+class StarRating extends mix(EnhanceBase).with(TemplateMixin, CustomElementMixin) {
   constructor() {
     super()
     this.fill = this.querySelectorAll('svg')[1]
+    this.render = this.render.bind(this)
   }
 
-  render() {
-    return `
-      <svg
-        width="84"
-        height="17"
-        viewBox="0 0 84 17"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <use xlink:href="#svg-stars">
-      </svg>
-
-      <svg
-        width="84"
-        height="17"
-        viewBox="0 0 84 17"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="absolute inset-0"
-        clip-path="inset(0 0% 0 0)"
-      >
-       <use xlink:href="#svg-filled-stars">
-      </svg>
-    `
+  render(args) {
+    return StarRatingHTML(args)
   }
 
   static get observedAttributes() {
@@ -64,7 +106,7 @@ class StarRating extends TemplateMixin(HTMLElement) {
   attributeChangedCallback(name, old, value) {
     if (old !== value) {
       if (name === 'inset') {
-        const clipPath = `inset(0 ${name}% 0 0)`
+        const clipPath = `inset(0 ${value}% 0 0)`
         this.fill.setAttribute('clip-path', clipPath)
       }
     }
@@ -73,7 +115,7 @@ class StarRating extends TemplateMixin(HTMLElement) {
 
 customElements.define('star-rating', StarRating)
 
-class MovieSearchPoster extends TemplateMixin(HTMLElement) {
+class MovieSearchPoster extends mix(EnhanceBase).with(TemplateMixin, CustomElementMixin) {
   constructor() {
     super()
     this.link = this.querySelector('a')
@@ -81,24 +123,11 @@ class MovieSearchPoster extends TemplateMixin(HTMLElement) {
     this.movieTitle = this.querySelector('h2')
     this.rating = this.querySelector('star-rating')
     this.average = this.querySelector('p > span')
+    this.render = this.render.bind(this)
   }
 
-  render() {
-    return `
-      <a class="relative flex flex-col">
-        <div class="relative image-wrapper">
-          <img
-            src="/_public/generic-movie.jpg"
-            class="si-100 object-cover"
-          />
-        </div>
-        <h2 class="mbs0 mbe-6"></h2>
-        <p class="flex gap-4 align-items-center text-1">
-          <star-rating></star-rating>
-          <span></span>
-        </p>
-      </a>
-    `
+  render(args) {
+    return MoviePosterHTML(args)
   }
 
   static get observedAttributes() {
@@ -139,8 +168,6 @@ class MovieSearchPoster extends TemplateMixin(HTMLElement) {
 }
 
 customElements.define('movie-search-poster', MovieSearchPoster)
-
-
 
 class MovieSearch extends HTMLElement {
   constructor() {
