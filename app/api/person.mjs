@@ -1,4 +1,3 @@
-import getCacheControl from '../lib/cacheControl.mjs'
 import { getMovieWithCast, getPerson } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
 
@@ -10,9 +9,6 @@ export async function fetchPerson (req) {
   const shows = await getMovieWithCast(id, page)
   const baseUrl = `/person?id=${id}`
   return {
-    headers: {
-      'cache-control': getCacheControl()
-    },
     json: { title: {
       primary: "Also appears in",
       secondary: ""

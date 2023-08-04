@@ -1,4 +1,3 @@
-import getCacheControl from '../lib/cacheControl.mjs'
 import { getCredits, getMovie, getVideos, getRecommendations } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
 
@@ -15,9 +14,6 @@ export async function fetchMovie (req) {
   movie.trailer = trailer
   const baseUrl = `/movie?id=${id}`
   return {
-    headers: {
-      'cache-control': getCacheControl()
-    },
     json: { title: {
       primary: "Recommended",
       secondary: "movies"
