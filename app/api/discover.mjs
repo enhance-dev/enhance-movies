@@ -1,4 +1,3 @@
-import getCacheControl from '../lib/cacheControl.mjs'
 import { getMovies, getVideos } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
 import { getActiveRoute } from '../middleware/activeRoute.mjs'
@@ -16,9 +15,6 @@ export async function fetchMovies (req) {
   const primary = `${category.charAt(0).toUpperCase()}${category.substring(1).replace('_', ' ')}`
 
   return {
-    headers: {
-      'cache-control': getCacheControl()
-    },
     json: {
       title: {
         primary,

@@ -1,4 +1,3 @@
-import getCacheControl from '../lib/cacheControl.mjs'
 import { getMovies, getVideos } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
 import { getActiveRoute } from '../middleware/activeRoute.mjs'
@@ -14,9 +13,6 @@ export async function fetchMovies (req) {
   const trailer = featuredVideos.find(video => video.type === 'Trailer' && video.site === 'YouTube')
 
   return {
-    headers: {
-      'cache-control': getCacheControl()
-    },
     json: {
       popular,
       topRated,
