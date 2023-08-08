@@ -1,6 +1,6 @@
 {
   "name": "enhance-movie",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "start": "enhance dev",
     "lint": "eslint ./app/**/*.mjs --fix"
