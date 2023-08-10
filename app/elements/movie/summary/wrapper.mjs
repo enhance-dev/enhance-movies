@@ -5,7 +5,7 @@ export default function MovieSummaryWrapper ({ html, state }) {
 
   return html`
     <style>
-      @keyframes filterIn {
+      @keyframes filterin {
         from {
           filter: none;
         }
@@ -46,7 +46,7 @@ export default function MovieSummaryWrapper ({ html, state }) {
         background-size: cover;
         inset: -2.5%; /* Blur filter can cause background edges to show at top and right; this hides that */
         filter: var(--movieBackdropFilter);
-        animation: 1s filterIn var(--easeOutQuint);
+        animation: 1s filterin var(--easeOutQuint);
         animation-delay: 0.5s;
         animation-fill-mode: both;
         transition: filter 0.5s var(--easeOutQuint);
