@@ -1,3 +1,4 @@
+import getCacheControl from '../lib/cacheControl.mjs'
 import { searchMovies } from '../tmdbAPI/index.mjs'
 import { fetchGenres } from '../middleware/genres.mjs'
 
@@ -8,6 +9,9 @@ export async function fetchMovies (req) {
   const shows = await searchMovies(q, page)
   const baseUrl = `search?q=${q}`
   return {
+    headers: {
+      'cache-control': getCacheControl(),
+    },
     json: { title: {
       primary: "Results for",
       secondary: `‘${q}’`
