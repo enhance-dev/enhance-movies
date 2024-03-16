@@ -6,6 +6,7 @@ prune true
 
 @plugins
 enhance/arc-plugin-enhance
+enhance/arc-plugin-styles
 mock-tmdb
 
 @enhance-styles
