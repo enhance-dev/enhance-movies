@@ -11,8 +11,9 @@
     "eslint": "^8.42.0"
   },
   "dependencies": {
-    "@begin/data": "^4.0.2",
-    "@enhance/arc-plugin-enhance": "^6.1.2",
+    "@begin/data": "^5.0.3",
+    "@enhance/arc-plugin-enhance": "^10.0.0",
+    "@enhance/arc-plugin-styles": "^5.0.5",
     "@enhance/layout-elements": "^0.0.1-alpha.8",
     "tiny-json-http": "^7.5.1"
   },
