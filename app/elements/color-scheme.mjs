@@ -35,6 +35,7 @@ export default function ColorScheme({ html }) {
       </label>
     </form>
 
+    <js-naked-day>
     <script type='module'>
       const lightStyles = [
         ['--background', 'var(--light)'],
@@ -118,5 +119,6 @@ export default function ColorScheme({ html }) {
 
       customElements.define('color-scheme', ColorScheme)
     </script>
+    </js-naked-day>
   `
 }

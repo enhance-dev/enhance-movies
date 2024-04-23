@@ -80,7 +80,8 @@ export default function MovieSearch ({ html, state }) {
         </div>
       </movie-dialog>
     </section>
-
-    <script type='module' src='/_public/browser/movie-search.mjs'></script>
+    <js-naked-day>
+      <script type='module' src='/_public/browser/movie-search.mjs'></script>
+    </js-naked-day>
   `
 }
